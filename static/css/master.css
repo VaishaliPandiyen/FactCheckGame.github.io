@@ -137,13 +137,14 @@ body {
   max-height: 100vh;
   background: url("../../img/8715883.gif");
   background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .title {
   font-family: sans-serif;
   text-align: center;
-  font-size: 2rem;
-  margin-top: 70vh;
+  margin-top: 96vh;
   color: lightgoldenrodyellow;
-  line-height: 2.5rem;
   letter-spacing: 0.1rem;  
+  opacity: 0.3;
 }
