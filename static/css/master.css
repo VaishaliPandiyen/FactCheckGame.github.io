@@ -135,13 +135,15 @@ CUSTOM CSS
 */
 body {
   max-height: 100vh;
-  background: rgb(30, 29, 25);
+  background: url("../../img/8715883.gif");
+  background-position: center;
 }
 .title {
   font-family: sans-serif;
-  font-weight: bold;
   text-align: center;
   font-size: 2rem;
-  margin-top: 45vh;
-  color: antiquewhite;
+  margin-top: 70vh;
+  color: lightgoldenrodyellow;
+  line-height: 2.5rem;
+  letter-spacing: 0.1rem;  
 }
