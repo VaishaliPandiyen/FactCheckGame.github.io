@@ -167,21 +167,27 @@ CUSTOM CSS
 
 .body_wrapper {
   background: rgb(0, 0, 0);
+  /* background: #fff; */
   height: 100vh;
 }
 .game_wrapper {
   height: calc(100vh - 40px - 2rem);
 }
 .game_wrapper,
-.claim_wrapper {
+.claim_wrapper,
+.s {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.card {
+.card_1 {
   background-color: orange;
   height: 400px;
   width: 400px;
+
+  margin: 40px;
+  border-radius: 0.1rem;
+  border: 5px inset rgba(255, 166, 0, 0.3);
 }
 .claim_wrapper {
   height: 100%;
@@ -192,33 +198,50 @@ CUSTOM CSS
   font-family: "bangers";
   font-size: 4rem;
 }
-.sec_1,
-.sec_2,
+.s {
+  height: 350px;
+  width: 350px;
+  padding: 30px;
+  box-sizing: border-box;
+  background: rgb(251, 173, 28);
+
+  flex-direction: column;
+}
+.s > p:nth-of-type(1) {
+  line-height: 300%;
+  font-size: 2rem;
+  font-family: "bangers";
+}
+.s > p:nth-of-type(2) {
+  text-align: center;
+  font-size: 1.05rem;
+  font-family: "Courier New", Courier, monospace;
+}
+.sec_2 {
+  display: flex;
+  flex-wrap: wrap;
+}
 .sec_3 {
-  height: inherit;
+  flex-direction: column;
+}
+.card_2, .card_3 {
+  height: 150px;
+  width: 700px;
+  background: rgb(252, 178, 41);
+  margin: 30px;
+  box-sizing: border-box;
 
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
 }
-.sec_detail {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
-  width: 80%;
-  padding: 20px;
+.c {
+  width: 150px;
+  background: orange;
+  font-size: 2rem;
+  font-family: sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
   box-sizing: border-box;
-}
-.sec_1_nxt,
-.sec_2_nxt {
-  width: 20%;
-  cursor: pointer;
-}
-
-.sec_1_nxt,
-.sec_2_nxt,
-.sec_detail > p {
-  text-align: center;
 }
