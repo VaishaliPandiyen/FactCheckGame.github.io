@@ -167,7 +167,7 @@ CUSTOM CSS
 
 .body_wrapper {
   background: rgb(0, 0, 0);
-  /* background: #fff; */
+  /* background: rgb(46, 46, 46); */
   height: 100vh;
 }
 .game_wrapper {
@@ -223,10 +223,16 @@ CUSTOM CSS
 }
 .sec_3 {
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  opacity: 0;
+  /* transition: opacity 5s ease; */
 }
-.card_2, .card_3 {
+.card_2,
+.card_3 {
   height: 150px;
-  width: 700px;
+  width: 760px;
   background: rgb(252, 178, 41);
   margin: 30px;
   box-sizing: border-box;
@@ -239,9 +245,138 @@ CUSTOM CSS
 .c {
   width: 150px;
   background: orange;
-  font-size: 2rem;
-  font-family: sans-serif;
+  color: rgb(0, 0, 0, 0.8);
+  font-size: 2.5rem;
+  font-family: "bangers";
   text-transform: uppercase;
   font-weight: 700;
   box-sizing: border-box;
+}
+.claim {
+  width: 500px;
+  font-family: sans-serif;
+  text-align: center;
+  padding: 50px;
+  /* font-size: 1.2rem; */
+  line-height: 1.5rem;
+  box-sizing: border-box;
+}
+.select {
+  width: 100px;
+  cursor: pointer;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.select > div {
+  height: 75px;
+  border: 1px solid rgb(0, 0, 0, 0.2);
+  box-sizing: border-box;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.tick {
+  background: rgba(0, 128, 0, 0.8);
+}
+.cross {
+  background: rgba(255, 0, 0, 0.8);
+}
+.select > div > img {
+  width: 50px;
+}
+.select > div > img:hover {
+  width: 55px;
+}
+.card_3 > div {
+  /* background: orange; */
+  width: 50%;
+  height: 100%;
+  text-align: center;
+  font-family: sans-serif;
+  font-size: 2rem;
+  text-transform: uppercase;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.clue_card:hover {
+  background: linear-gradient(to right, orange, rgb(252, 178, 41));
+}
+.src_card:hover {
+  background: linear-gradient(to left, orange, rgb(252, 178, 41));
+}
+.clue_card:hover,
+.src_card:hover {
+  cursor: pointer;
+}
+.card_3 > div:hover p {
+  transform: scale(1.05);
+  font-weight: 700;
+  /* color: rgb(69, 38, 0); */
+}
+.card_3 {
+  position: relative;
+}
+.slant_border {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  /* right: 0; */
+  width: 5px !important; /* Adjust the width of the slanting border */
+  background-color: black; /* Change the color of the border if needed */
+  transform: translateX(-50%) skewX(-20deg); /* Adjust the skew angle as needed */
+}
+.clue_card:hover ~ .slant_border {
+  left: 52%;
+}
+.src_card:hover ~ .slant_border {
+  left: -2%;
+}
+.disappear_1 {
+  transition: opacity 1s ease;
+  opacity: 0;
+  display: None;
+}
+.clues {
+  height: 150px;
+  width: 760px;
+  background-color: rgb(252, 178, 41);
+
+  opacity: 0;
+  transition: opacity 2s ease;
+}
+.click_text {
+  left: 0;
+  opacity: 1;
+}
+/*
+
+
+CLUES CAROUSEL
+
+
+*/
+.clues_each {
+  display: flex;
+  align-items: center;
+}
+
+.clue_container {
+  flex: 1;
+  overflow: hidden;
+}
+
+.clue {
+  display: none;
+  margin: 0;
+  padding: 10px;
+}
+
+.clue.active {
+  display: block;
 }

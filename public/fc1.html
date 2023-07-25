@@ -39,16 +39,50 @@
                             <p>Claim</p>
                         </div>
                         <div class="claim">
-                            <p>Claim</p>
+                            <p>Over 200 dogs showed up and lined up around the block to wish Robert a happy birthday.
+                            </p>
+                        </div>
+                        <div class="select">
+                            <div class="tick">
+                                <img src="../img/tick.png" alt="True">
+                            </div>
+                            <div class="cross">
+                                <img src="../img/cross.png" alt="True">
+                            </div>
                         </div>
                     </div>
                     <div class="card_3">
+                        <div class="clue_card" onclick="handleClueCardClick(this)">
+                            <p class="click_text">Clue(s)</p>
+                            <div class="clues" style="display: none;">
+                                <div class="info">
+                                    <p>Clues</p>
+                                    <div class="clues_each">
+                                        <button class="prev_clue" onclick="showPreviousClue()">Previous</button>
+                                        <div class="clue_container">
+                                          <p class="clue active">Text 1</p>
+                                          <p class="clue">Text 2</p>
+                                          <p class="clue">Text 3</p>
+                                          <!-- Add more text elements as needed -->
+                                        </div>
+                                        <button class="next_clue" onclick="showNextClue()">Next</button>
+                                      </div>
+                                      
+                                </div>
+                                <div class="check_other">
+                                    <a href="">>> Check Sources</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slant_border"></div>
+                        <div class="src_card" onclick="handleSrcCardClick(this)">
+                            <p class="click_text">Source(s)</p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
 
-    </div>
+        </div>
     </div>
     <script src="../static/js/game.js"></script>
 </body>
