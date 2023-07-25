@@ -4,3 +4,10 @@ Src : https://wallpaperaccess.com/cute-gif Accessed at 13-07-2023 14:15
 
 Img : leftChev01.png
 Src : https://www.flaticon.com/free-icon/left-chevron_1634152?term=chevron+left&page=1&position=9&origin=tag&related_id=1634152 Accessed at 13-07-2023 21:30
+
+
+Img : DoubleLeftChev.png
+Attr : <a href="https://www.flaticon.com/free-icons/arrow" title="arrow icons">Arrow icons created by th studio - Flaticon</a>
+
+Img : DoubleRightChev.png
+Attr : <a href="https://www.flaticon.com/free-icons/double-chevron" title="double chevron icons">Double chevron icons created by th studio - Flaticon</a>

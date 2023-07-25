@@ -36,6 +36,7 @@ let card3_click1_basics = () => {
 
 function handleClueCardClick(card) {
   card3_click1_basics();
+  src_card.style.display = "None"
   clue_title.style.transition = "left 2s ease, opacity 1s ease";
   clue_title.style.left = "-100%";
   clue_title.style.opacity = "0";
@@ -61,10 +62,10 @@ CLUES CAROUSEL
 */
 
 let currentIndex = 0;
-const texts = document.querySelectorAll(".clue");
+const clue = document.querySelectorAll(".clue");
 
 function showClue(index) {
-  texts.forEach((text, i) => {
+  clue.forEach((text, i) => {
     if (i === index) {
       text.classList.add("active");
     } else {

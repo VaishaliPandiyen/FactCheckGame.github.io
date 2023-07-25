@@ -247,7 +247,8 @@ CUSTOM CSS
   background: orange;
   color: rgb(0, 0, 0, 0.8);
   font-size: 2.5rem;
-  font-family: "bangers";
+  /* font-family: "bangers"; */
+  font-family: sans-serif;
   text-transform: uppercase;
   font-weight: 700;
   box-sizing: border-box;
@@ -313,7 +314,7 @@ CUSTOM CSS
 .src_card:hover {
   cursor: pointer;
 }
-.card_3 > div:hover p {
+.card_3 > div:hover .click_text {
   transform: scale(1.05);
   font-weight: 700;
   /* color: rgb(69, 38, 0); */
@@ -347,8 +348,8 @@ CUSTOM CSS
   width: 760px;
   background-color: rgb(252, 178, 41);
 
-  opacity: 0;
-  transition: opacity 2s ease;
+  /* opacity: 0;
+  transition: opacity 2s ease; */
 }
 .click_text {
   left: 0;
@@ -361,22 +362,75 @@ CLUES CAROUSEL
 
 
 */
-.clues_each {
+.info {
   display: flex;
-  align-items: center;
-}
+  /* justify-content: flex-start;
+  align-items: center; */
 
-.clue_container {
+  height: 80%;
+}
+.rotate_label {
+  /* writing-mode: vertical-rl;  */
+  white-space: nowrap;
+  text-orientation: upright;
+  transform-origin: right top;
+  transform: rotate(-90deg);
+
+  position: relative;
+  left: -50px;
+  top: 20px;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.i_wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 85%;
+}
+.i_container {
   flex: 1;
   overflow: hidden;
 }
+.i {
+  display: flex;
+  flex-direction: column;
 
+  cursor: default;
+}
 .clue {
   display: none;
   margin: 0;
   padding: 10px;
-}
 
+  font-size: 1rem;
+  text-transform: none;
+  font-weight: 400 !important;
+}
 .clue.active {
   display: block;
+}
+.i_wrapper > img {
+  width: 30px;
+  cursor: pointer;
+}
+.check_other {
+  background: rgb(0, 0, 0, 0.1);
+  height: 20%;
+
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.check_other > div {
+  color: darkslategrey;
+  font-size: 1rem;
+  margin-right: 20px;
+  /* text-transform: none; */
+  /* font-weight: 600; */
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
 }
