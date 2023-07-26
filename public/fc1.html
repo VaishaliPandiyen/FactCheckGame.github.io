@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Game</title>
-    <link rel="stylesheet" href="../static/css/master.css">
+    <link rel="stylesheet" href="../static/css/game.css">
+    <link rel="stylesheet" href="../static/css/resets.css">
 </head>
 
 <body>
@@ -58,42 +59,70 @@
                                 <div class="info">
                                     <p class="rotate_label">Clues</p>
                                     <div class="i_wrapper">
-                                        <img src="../img/DoubleLeftChev.png" class="prev_clue" onclick="showPreviousClue()">
+                                        <img src="../img/DoubleLeftChev.png" class="prev_clue"
+                                            onclick="showPreviousClue()">
                                         <div class="i_container">
                                             <p class="clue active">Robert Moore is a dog lover.</p>
-                                            <p class="clue">A <a href="https://www.facebook.com/reel/220703114242927">reel</a> that
-                                                displayed photos and videos of Moore’s big day amassed more than 440,000
-                                                likes and was shared more than 90,000 times</p>
-                                            <p class="clue">The dogs wore their birthday best — which included tuxedos
-                                                and mini cowboy hats — and came with cards, flowers, cupcakes and, of
+                                            <p class="clue">A <a
+                                                    href="https://www.facebook.com/reel/220703114242927">reel</a> with
+                                                photos and videos of Moore’s big day <br> got over 440,000
+                                                likes and 90,000 shares</p>
+                                            <p class="clue">The dogs wore their birthday best — <br> tuxedos
+                                                and mini cowboy hats — and came with cards, flowers, cupcakes <br> and,
+                                                of
                                                 course, doggy kisses.</p>
                                             <p class="clue">The family wanted to do something special to mark his
-                                                milestone birthday and posted on the neighbourhood app <a
-                                                    href="https://nextdoor.com/p/c5QS5RD7rdhj">Nextdoor</a>, and on
-                                                Facebook, asking dog owners in the area to stop by with their canines
-                                                for a June 17 pet parade.
+                                                milestone birthday. <br> <br>They posted on the neighbourhood app <a
+                                                    href="https://nextdoor.com/p/c5QS5RD7rdhj">Nextdoor</a> and
+                                                Facebook, <br> asking dog owners to stop by with their canines
+                                                for pet parade.
                                             </p>
-                                            <p class="clue">Moore’s daughter, Alison Moore, <a
+                                            <p class="clue">Moore’s daughter Alison Moore, <a
                                                     href="https://www.washingtonpost.com/lifestyle/2023/06/23/dog-pet-parade-100-birthday/">told
                                                     The Washington Post</a> that her father has loved dogs all his life
                                                 and wants to pet each one he sees. </p>
                                         </div>
-                                        <img src="../img/DoubleRightChev.png" class="next_clue" onclick="showNextClue()">
+                                        <img src="../img/DoubleRightChev.png" class="next_clue"
+                                            onclick="showNextClue()">
                                     </div>
                                 </div>
                                 <div class="check_other">
-                                    <div class="chk_src"><img src="../img/DoubleLeftChev.png" style="width: 20px;" alt=""><p>Check Sources</p></div>
+                                    <div onclick="viewSources()"><img src="../img/DoubleLeftChev.png" style="width: 20px;"
+                                            alt="">
+                                        <p>Check Sources</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                         <div class="slant_border"></div>
                         <div class="src_card" onclick="handleSrcCardClick(this)">
                             <p class="click_text">Source(s)</p>
+                            <div class="sources i" style="display: none;">
+                                <div class="info">
+                                    <p class="rotate_label">Sources</p>
+                                    <div class="i_wrapper">
+                                        <img src="../img/DoubleLeftChev.png" class="prev_src"
+                                            onclick="showPreviousSource()">
+                                        <div class="i_container">
+                                            <p class="source active">Source 1</p>
+                                            <p class="source"> Source 2</p>
+                                            <p class="source"> Source 3</p>
+                                        </div>
+                                        <img src="../img/DoubleRightChev.png" class="next_src"
+                                            onclick="showNextSource()">
+                                    </div>
+                                </div>
+                                <div class="check_other">
+                                    <div onclick="viewClues()"><img src="../img/DoubleLeftChev.png"
+                                            style="width: 20px;" alt="">
+                                        <p>Check Clues</p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-
         </div>
     </div>
     <script src="../static/js/game.js"></script>
