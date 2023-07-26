@@ -15,6 +15,13 @@
   justify-content: center;
   align-items: center;
 }
+/*
+
+
+SEC 1
+
+
+*/
 .card_1 {
   background-color: orange;
   height: 400px;
@@ -27,14 +34,26 @@
 .claim_wrapper {
   height: 100%;
   width: 100%;
-  cursor: pointer;
+  /* cursor: pointer; */
 }
 .claim_num {
   font-family: "bangers";
   font-size: 4rem;
 }
+/*
+
+
+SEC 2
+
+
+*/
+.sec_2_and_3 {
+  position: relative;
+  top: auto;
+  transition: top 1s ease;
+}
 .s {
-  height: 350px;
+  height: 300px;
   width: 350px;
   padding: 30px;
   box-sizing: border-box;
@@ -43,26 +62,37 @@
   flex-direction: column;
 }
 .s > p:nth-of-type(1) {
-  line-height: 300%;
-  font-size: 2rem;
+  line-height: 200%;
+  font-size: 3rem;
   font-family: "bangers";
 }
 .s > p:nth-of-type(2) {
   text-align: center;
   font-size: 1.05rem;
-  font-family: "Courier New", Courier, monospace;
+  /* font-family: "Courier New", Courier, monospace; */
+  font-family: sans-serif;
 }
 .sec_2 {
   display: flex;
   flex-wrap: wrap;
+
+  opacity: 0;
+  transition: opacity 2s ease;
 }
+/* 
+
+
+SEC 3
+
+
+*/
 .sec_3 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
 
   opacity: 0;
-  /* transition: opacity 5s ease; */
+  transition: opacity 3s ease;
 }
 .card_2,
 .card_3 {
@@ -194,11 +224,11 @@
 }
 /*
   
-  
-  CLUES CAROUSEL
-  
-  
-  */
+
+CLUES CAROUSEL  
+
+
+*/
 .info {
   display: flex;
   /* justify-content: flex-start;

@@ -1,16 +1,60 @@
-let card1 = document.querySelector(".card_1");
+/* 
+
+ON GAME LOAD
+
+*/
+
 let sec1 = document.querySelector(".sec_1");
 let sec2 = document.querySelector(".sec_2");
 let sec3 = document.querySelector(".sec_3");
+let sec2n3 = document.querySelector(".sec_2_and_3");
 
-sec1.addEventListener("click", () => {
-  sec1.style.display = "None";
-  // sec2.style.display = "Flex";
+/*
+// sec1.addEventListener("click", () => {
+//   sec1.style.display = "None";
+//   sec2.style.display = "Flex";
+//   sec3.style.display = "Flex";
+//   setTimeout(() => (sec3.style.opacity = "1"), 5000);
+//   // sec3.style.opacity = "1";
+// });
+*/
+
+sec1.style.opacity = "1";
+sec1.style.transition = "opacity 1s ease";
+
+setTimeout(() => {
+  sec1.style.opacity = "0";
+  setTimeout(() => {
+    sec1.style.display = "None";
+  }, 1000);
+}, 2000);
+setTimeout(() => {
+  sec2.style.display = "Flex";
+  setTimeout(() => (sec2.style.opacity = "1"), 500);
+}, 3000);
+setTimeout(() => {
+  sec2n3.style.top = "33.3%";
   sec3.style.display = "Flex";
-  // setTimeout(() => (sec3.style.opacity = "1"), 5000);
-  sec3.style.opacity = "1";
-});
+  setTimeout(() => (sec3.style.opacity = "1"), 1000);
 
+  sec2.addEventListener('mouseenter', ()=> {
+    sec2n3.style.top = "33.3%";
+  })
+  sec3.addEventListener('mouseenter', ()=> {
+    sec2n3.style.top = "-30%";
+  })
+}, 8000);
+
+
+/*
+-----------------------------------------------------
+*/
+
+/*
+
+CLICK TO SHOW CLUES AND SOURCES
+
+*/
 let click_texts = document.querySelectorAll(".click_text");
 
 let clue_card = document.querySelector(".clue_card");
