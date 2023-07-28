@@ -44,20 +44,23 @@
                             </p>
                         </div>
                         <div class="select">
-                            <div class="tick">
+                            <div class="tick" onclick="yes(true)">
                                 <img src="../img/tick.png" alt="True">
                             </div>
-                            <div class="cross">
+                            <div class="cross" onclick="no(false)">
                                 <img src="../img/cross.png" alt="True">
                             </div>
                         </div>
                     </div>
                     <div class="card_3">
                         <div class="clue_card" onclick="handleClueCardClick(this)">
-                            <p class="click_text">Clue(s)</p>
+                            <!-- <p class="click_text">Clue(s)</p> -->
+                            <p class="click_text">View Clues 
+                                <span>(and sources)</span>
+                            </p>
                             <div class="clues i" style="display: none;">
                                 <div class="info">
-                                    <p class="rotate_label">Clues</p>
+                                    <!-- <p class="rotate_label">Clues</p> -->
                                     <div class="i_wrapper">
                                         <img src="../img/DoubleLeftChev.png" class="prev_clue"
                                             onclick="showPreviousClue()">
@@ -86,16 +89,16 @@
                                             onclick="showNextClue()">
                                     </div>
                                 </div>
-                                <div class="check_other">
-                                    <div onclick="viewSources()"><img src="../img/DoubleLeftChev.png" style="width: 20px;"
-                                            alt="">
+                                <!-- <div class="check_other">
+                                    <div onclick="viewSources()"><img src="../img/DoubleLeftChev.png"
+                                            style="width: 20px;" alt="">
                                         <p>Check Sources</p>
                                     </div>
-                                </div>
+                                </div> -->
                             </div>
                         </div>
-                        <div class="slant_border"></div>
-                        <div class="src_card" onclick="handleSrcCardClick(this)">
+                        <!-- <div class="slant_border"></div> -->
+                        <!-- <div class="src_card" onclick="handleSrcCardClick(this)">
                             <p class="click_text">Source(s)</p>
                             <div class="sources i" style="display: none;">
                                 <div class="info">
@@ -119,9 +122,13 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
+            </div>
+            <div class="sec_4" style="display: none;">
+                <img id="emoji" src="" alt="">
+                <div id="verdict" style="display: none;"></div>
             </div>
         </div>
     </div>
