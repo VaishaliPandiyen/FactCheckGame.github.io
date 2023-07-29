@@ -1,5 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Bangers&display=swap");
 
+body {
+  font-family: sans-serif;
+}
 .body_wrapper {
   background: rgb(0, 0, 0);
   /* background: rgb(46, 46, 46); */
@@ -194,7 +197,7 @@ SEC 3
 }
 .card_3 {
   height: 50px;
-  width: 500px;
+  /* width: 500px; */
   transition: height 2s, width 2s;
 }
 .slant_border {
@@ -334,20 +337,64 @@ SEC 4
 
 
 */
+.sec_4 {
+  align-items: center;
+}
 #emoji {
   transform: scale(0);
-  z-index: 1;
+
   transition: transform 2s;
+
+  position: relative;
+  top: -250px;
+  left: -250px;
 }
 #verdict {
   height: 400px;
   width: 400px;
   border-radius: 0.8rem;
 
+  transition: opacity 2s ease, background 1s ease, border 1s ease;
+}
+#verdict_content {
+  height: 400px;
+  width: 400px;
   position: relative;
-  top: 50px;
-  left: -250px;
-  z-index: 0;
+  top: -514px;
+  padding: 50px 20px 20px 70px;
+  box-sizing: border-box;
+
   opacity: 0;
   transition: opacity 2s ease;
+}
+#verdict_title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #00000070;
+  font-style: oblique;
+  overflow-wrap: break-word;
+}
+#end_action {
+  display: flex;
+  flex-direction: column;
+  margin: 0 20px;
+
+  opacity: 0;
+  transition: opacity 2s ease;
+}
+#end_action > button {
+  margin: 10px;
+  padding: 10px 15px;
+  font-size: 1rem;
+  font-family: sans-serif;
+  color: white;
+  background: black;
+  border: 2px solid white;
+  border-radius: 0.2rem;
+  cursor: pointer;
+  width: 130px;
+}
+#end_action > button:hover {
+  background: rgba(255, 255, 255, 0.1);
+  font-weight: 600;
 }
