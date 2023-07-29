@@ -5,7 +5,6 @@ body {
 }
 .body_wrapper {
   background: rgb(0, 0, 0);
-  /* background: rgb(46, 46, 46); */
   height: 100vh;
 }
 .game_wrapper {
@@ -38,7 +37,6 @@ SEC 1
 .claim_wrapper {
   height: 100%;
   width: 100%;
-  /* cursor: pointer; */
 }
 .claim_num {
   font-family: "bangers";
@@ -74,8 +72,6 @@ SEC 2
 .s > p:nth-of-type(2) {
   text-align: center;
   font-size: 1.05rem;
-  /* font-family: "Courier New", Courier, monospace; */
-  font-family: sans-serif;
 }
 .sec_2 {
   display: flex;
@@ -128,7 +124,6 @@ SEC 3
   font-family: sans-serif;
   text-align: center;
   padding: 50px;
-  /* font-size: 1.2rem; */
   line-height: 1.5rem;
   box-sizing: border-box;
 }
@@ -162,16 +157,11 @@ SEC 3
   width: 55px;
 }
 .card_3 > div {
-  /* background: orange; */
-  /* width: 50%; */
   width: 100%;
   height: 100%;
   text-align: center;
-  font-family: sans-serif;
-  /* font-size: 2rem; */
   font-size: 1.3rem;
   font-weight: 700;
-  /* text-transform: uppercase; */
 
   display: flex;
   justify-content: center;
@@ -180,43 +170,38 @@ SEC 3
 .clue_card:hover {
   background: linear-gradient(to right, orange, rgb(252, 178, 41));
 }
-.src_card:hover {
+/* .src_card:hover {
   background: linear-gradient(to left, orange, rgb(252, 178, 41));
-}
-.clue_card:hover,
-.src_card:hover {
+} */
+
+/* .src_card:hover, */
+.clue_card:hover {
   cursor: pointer;
 }
 .card_3 > div:hover .click_text {
   transform: scale(1.05);
-  /* font-weight: 700; */
-  /* color: rgb(69, 38, 0); */
 }
 .card_3 {
   position: relative;
-}
-.card_3 {
+  font-family: sans-serif;
   height: 50px;
-  /* width: 500px; */
   transition: height 2s, width 2s;
 }
-.slant_border {
+/* .slant_border {
   position: absolute;
   top: 0;
   bottom: 0;
   left: 50%;
-  /* right: 50%; */
-  /* right: 0; */
-  width: 5px !important; /* Adjust the width of the slanting border */
-  background-color: black; /* Change the color of the border if needed */
-  transform: translateX(-50%) skewX(-20deg); /* Adjust the skew angle as needed */
-}
-.clue_card:hover ~ .slant_border {
+  width: 5px !important; 
+  background-color: black; 
+  transform: translateX(-50%) skewX(-20deg); 
+} */
+/* .clue_card:hover ~ .slant_border {
   left: 52%;
 }
 .src_card:hover ~ .slant_border {
   left: -2%;
-}
+} */
 .disappear_1 {
   transition: opacity 1s ease;
   opacity: 0;
@@ -244,14 +229,10 @@ CLUES CAROUSEL
 */
 .info {
   display: flex;
-  /* justify-content: flex-start;
-    align-items: center; */
 
-  /* height: 80%; */
   height: 100%;
 }
 .rotate_label {
-  /* writing-mode: vertical-rl;  */
   white-space: nowrap;
   text-orientation: upright;
   transform-origin: right top;
@@ -273,7 +254,6 @@ CLUES CAROUSEL
   justify-content: space-between;
   align-items: center;
 
-  /* width: 85%; */
   width: 100%;
   z-index: 1;
   padding: 20px;
@@ -322,8 +302,6 @@ CLUES CAROUSEL
   color: darkslategrey;
   font-size: 1rem;
   margin-right: 20px;
-  /* text-transform: none; */
-  /* font-weight: 600; */
   cursor: pointer;
 
   display: flex;
@@ -374,6 +352,11 @@ SEC 4
   font-style: oblique;
   overflow-wrap: break-word;
 }
+#verdict_info {
+  overflow-wrap: break-word;
+  margin: 30px 30px 0 0;
+  font-family: sans-serif;
+}
 #end_action {
   display: flex;
   flex-direction: column;
@@ -386,7 +369,6 @@ SEC 4
   margin: 10px;
   padding: 10px 15px;
   font-size: 1rem;
-  font-family: sans-serif;
   color: white;
   background: black;
   border: 2px solid white;

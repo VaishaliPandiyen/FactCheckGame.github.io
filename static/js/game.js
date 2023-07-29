@@ -91,7 +91,10 @@ let card3_click1_basics = () => {
   clue_title.opacity = "0";
 };
 
+let isCluesSeen = false;
+
 const handleClueCardClick = (card) => {
+  isCluesSeen = true;
   card3_click1_basics();
 
   card3.style.height = "150px";
@@ -120,9 +123,9 @@ CLUES CAROUSEL
 
 */
 
-let currentIndex_1 = 0;
+let currentIndex = 0;
+
 const clue = document.querySelectorAll(".clue");
-const clue_navs = document.querySelectorAll(".nav_clue");
 
 const showClue = (index) => {
   clue.forEach((clue, i) => {
@@ -135,16 +138,16 @@ const showClue = (index) => {
 };
 
 const showNextClue = () => {
-  if (currentIndex_1 < clue.length - 1) {
-    currentIndex_1++;
-    showClue(currentIndex_1);
+  if (currentIndex < clue.length - 1) {
+    currentIndex++;
+    showClue(currentIndex);
   }
 };
 
 const showPreviousClue = () => {
-  if (currentIndex_1 > 0) {
-    currentIndex_1--;
-    showClue(currentIndex_1);
+  if (currentIndex > 0) {
+    currentIndex--;
+    showClue(currentIndex);
   }
 };
 
@@ -162,7 +165,11 @@ let emoji = document.getElementById("emoji");
 let verdict = document.getElementById("verdict");
 let verdict_title = document.getElementById("verdict_title");
 let verdict_content = document.getElementById("verdict_content");
+let verdict_info = document.getElementById("verdict_info");
 let end_action = document.getElementById("end_action");
+
+let g1c2a1s;
+let g1c2a1 = () => (g1c2a1s = true);
 
 const showVerdict = (verdict, v) => {
   sec2n3.style.opacity = "0";
@@ -182,7 +189,45 @@ const showVerdict = (verdict, v) => {
     style.border = v ? "3px solid green" : "5px solid red";
     verdict_content.style.opacity = "1";
     end_action.style.opacity = "1";
-  }, 5000);
+    setTimeout(() => {
+      if (verdict.style.background == "yellowgreen" && isCluesSeen == true) {
+        console.log("You have seen the clues", currentIndex, isCluesSeen);
+        switch (currentIndex) {
+          case 0:
+            console.log(currentIndex, "clue1");
+            verdict_info.innerHTML =
+              "How did you know 200 dogs showed up just because he’s a dog lover?";
+            break;
+          case 1:
+            verdict_info.innerHTML =
+              "BUT that didn’t say anything about 200 dogs!";
+            break;
+          case 2:
+            if (g1c2a1s == true) {
+              verdict_info.innerHTML =
+                "The reel said he had 200 dogs for his birthday.";
+            } else {
+              verdict_info.innerHTML =
+                "BUT the number of likes and shares on a reel does not necessarily indicate whether the information in the reel is true!";
+            }
+            break;
+          case 3:
+            verdict_info.innerHTML =
+              "A neighborhood app post by his family does sound credible. However…";
+            break;
+          case 4:
+            verdict_info.innerHTML = "Now it is good enough to be true!";
+            break;
+        }
+      }
+    }, 500);
+  }, 3500);
 };
 
 const tf = (v) => showVerdict(verdict, v);
+
+// In some clues, the users should click on the <link> to find info. Not doing so should be marked and be given a slightly given response.
+
+const more = () => setTimeout(() => (window.location.href = "fc1.html"), 1000);
+
+const exit = () => setTimeout(() => (window.location.href = "play.html"), 1000);
