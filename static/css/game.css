@@ -156,9 +156,8 @@ SEC 3
 .select > div > img:hover {
   width: 55px;
 }
-.card_3 > div {
-  width: 100%;
-  height: 100%;
+.card_3 {
+  width: 760px;
   text-align: center;
   font-size: 1.3rem;
   font-weight: 700;
@@ -166,55 +165,24 @@ SEC 3
   display: flex;
   justify-content: center;
   align-items: center;
-}
-.clue_card:hover {
-  background: linear-gradient(to right, orange, rgb(252, 178, 41));
-}
-/* .src_card:hover {
-  background: linear-gradient(to left, orange, rgb(252, 178, 41));
-} */
 
-/* .src_card:hover, */
-.clue_card:hover {
-  cursor: pointer;
-}
-.card_3 > div:hover .click_text {
-  transform: scale(1.05);
-}
-.card_3 {
   position: relative;
   font-family: sans-serif;
   height: 50px;
   transition: height 2s, width 2s;
 }
-/* .slant_border {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 50%;
-  width: 5px !important; 
-  background-color: black; 
-  transform: translateX(-50%) skewX(-20deg); 
-} */
-/* .clue_card:hover ~ .slant_border {
-  left: 52%;
+.card_3:hover {
+  background: linear-gradient(to right, orange, rgb(252, 178, 41));
+  cursor: pointer;
 }
-.src_card:hover ~ .slant_border {
-  left: -2%;
-} */
+.card_3:hover .click_text {
+  transform: scale(1.05);
+}
+
 .disappear_1 {
   transition: opacity 1s ease;
   opacity: 0;
   display: None;
-}
-.clues,
-.sources {
-  height: 150px;
-  width: 760px;
-  background-color: rgb(252, 178, 41);
-
-  opacity: 0;
-  transition: opacity 2s ease;
 }
 .click_text {
   left: 0;
@@ -227,66 +195,36 @@ CLUES CAROUSEL
 
 
 */
-.info {
-  display: flex;
-
-  height: 100%;
-}
-.rotate_label {
-  white-space: nowrap;
-  text-orientation: upright;
-  transform-origin: right top;
-  transform: rotate(-90deg);
-
-  position: relative;
-  left: -50px;
-  top: 20px;
-  font-size: 1.5rem;
-  font-weight: 600;
-  z-index: 0;
-}
-.sources .rotate_label {
-  left: -70px;
-  top: 0;
-}
-.i_wrapper {
+.clues {
   display: flex;
   justify-content: space-between;
   align-items: center;
 
-  width: 100%;
+  opacity: 0;
+  transition: opacity 2s ease;
   z-index: 1;
+  
+  cursor: default;
+  width: 100%;
   padding: 20px;
   box-sizing: border-box;
-}
-.sources .i_wrapper {
-  width: 80%;
 }
 .i_container {
   flex: 1;
   overflow: hidden;
 }
-.i {
-  display: flex;
-  flex-direction: column;
-
-  cursor: default;
-}
-.clue,
-.source {
+.clue {
   display: none;
   margin: 0;
   padding: 10px;
-
   font-size: 1rem;
   text-transform: none;
   font-weight: 400 !important;
 }
-.clue.active,
-.source.active {
+.clue.active {
   display: block;
 }
-.i_wrapper > img {
+.clues > img {
   width: 30px;
   cursor: pointer;
 }
@@ -320,7 +258,6 @@ SEC 4
 }
 #emoji {
   transform: scale(0);
-
   transition: transform 2s;
 
   position: relative;

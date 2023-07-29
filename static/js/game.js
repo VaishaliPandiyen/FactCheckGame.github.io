@@ -10,15 +10,6 @@ let sec3 = document.querySelector(".sec_3");
 let sec2n3 = document.querySelector(".sec_2_and_3");
 let sec4 = document.querySelector(".sec_4");
 
-/*
-// sec1.addEventListener("click", () => {
-//   sec1.style.display = "None";
-//   sec2.style.display = "Flex";
-//   sec3.style.display = "Flex";
-//   setTimeout(() => (sec3.style.opacity = "1"), 5000);
-//   // sec3.style.opacity = "1";
-// });
-*/
 const gameLoad = () => {
   sec1.style.opacity = "1";
   sec1.style.transition = "opacity 1s ease";
@@ -58,9 +49,7 @@ const gameLoad = () => {
 
 gameLoad();
 
-/*
------------------------------------------------------
-*/
+/* ----------------------------------------------------- */
 
 /*
 
@@ -69,23 +58,12 @@ CLICK TO SHOW CLUES AND SOURCES
 */
 let click_texts = document.querySelectorAll(".click_text");
 
-let clue_card = document.querySelector(".clue_card");
-let clue_title = clue_card.querySelector(".click_text");
+let card3 = document.querySelector(".card_3");
+let clue_title = card3.querySelector(".click_text");
 let clues = document.querySelector(".clues");
 
-let card3 = document.querySelector(".card_3");
 
-// let src_card = document.querySelector(".src_card");
-// let src_title = src_card.querySelector(".click_text");
-// let srcs = document.querySelector(".sources");
-
-// let slant = document.querySelector(".slant_border");
-
-/* 
-
-CLICKING CLUE(S)
-
-*/
+/*  CLICKING CLUE(S) */
 
 let card3_click1_basics = () => {
   clue_title.opacity = "0";
@@ -111,10 +89,6 @@ const handleClueCardClick = (card) => {
     clues.style.transition = "opacity 2s ease";
     clues.style.opacity = "1";
   }, 1500);
-
-  setTimeout(() => {
-    clue_card.style.width = "760px";
-  }, 2000);
 };
 
 /*
@@ -151,9 +125,7 @@ const showPreviousClue = () => {
   }
 };
 
-/*
------------------------------------------------------
-*/
+/* ----------------------------------------------------- */
 
 /*
 
@@ -183,6 +155,15 @@ const showVerdict = (verdict, v) => {
   }, 2000);
   setTimeout(() => (emoji.style.transform = "scale(0.2)"), 3000);
 
+  const verdicts = {
+    0: "How did you know 200 dogs showed up just because he’s a dog lover?",
+    1: "BUT that didn’t say anything about 200 dogs!",
+    2.1: "The reel said he had 200 dogs for his birthday.",
+    2.2: "BUT the number of likes and shares on a reel does not necessarily indicate whether the information in the reel is true!",
+    3: "A neighborhood app post by his family does sound credible. However…",
+    4: "Now it is good enough to be true!",
+  };
+
   setTimeout(() => {
     const { style } = verdict;
     style.background = v ? "yellowgreen" : "orangered";
@@ -190,35 +171,32 @@ const showVerdict = (verdict, v) => {
     verdict_content.style.opacity = "1";
     end_action.style.opacity = "1";
     setTimeout(() => {
-      if (verdict.style.background == "yellowgreen" && isCluesSeen == true) {
-        console.log("You have seen the clues", currentIndex, isCluesSeen);
-        switch (currentIndex) {
-          case 0:
-            console.log(currentIndex, "clue1");
-            verdict_info.innerHTML =
-              "How did you know 200 dogs showed up just because he’s a dog lover?";
-            break;
-          case 1:
-            verdict_info.innerHTML =
-              "BUT that didn’t say anything about 200 dogs!";
-            break;
-          case 2:
-            if (g1c2a1s == true) {
-              verdict_info.innerHTML =
-                "The reel said he had 200 dogs for his birthday.";
-            } else {
-              verdict_info.innerHTML =
-                "BUT the number of likes and shares on a reel does not necessarily indicate whether the information in the reel is true!";
-            }
-            break;
-          case 3:
-            verdict_info.innerHTML =
-              "A neighborhood app post by his family does sound credible. However…";
-            break;
-          case 4:
-            verdict_info.innerHTML = "Now it is good enough to be true!";
-            break;
+      if (isCluesSeen == true) {
+        if (verdict.style.background == "yellowgreen") {
+          switch (currentIndex) {
+            case 0:
+              verdict_info.innerHTML = verdicts[0];
+              break;
+            case 1:
+              verdict_info.innerHTML = verdicts[1];
+              break;
+            case 2:
+              g1c2a1s == true
+                ? (verdict_info.innerHTML = verdicts[2.1])
+                : (verdict_info.innerHTML = verdicts[2.2]);
+              break;
+            case 3:
+              verdict_info.innerHTML = verdicts[3];
+              break;
+            case 4:
+              verdict_info.innerHTML = verdicts[4];
+              break;
+          }
+        } else if (verdict.style.background == "orangered") {
+          // responses for false(s)
         }
+      } else {
+        // response for not viewing clues
       }
     }, 500);
   }, 3500);
@@ -226,7 +204,13 @@ const showVerdict = (verdict, v) => {
 
 const tf = (v) => showVerdict(verdict, v);
 
-// In some clues, the users should click on the <link> to find info. Not doing so should be marked and be given a slightly given response.
+/* ----------------------------------------------------- */
+
+/*
+
+OTHERS
+
+*/
 
 const more = () => setTimeout(() => (window.location.href = "fc1.html"), 1000);
 
