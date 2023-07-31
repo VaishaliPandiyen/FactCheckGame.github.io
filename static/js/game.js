@@ -18,17 +18,17 @@ const gameLoad = () => {
     sec1.style.opacity = "0";
     setTimeout(() => {
       sec1.style.display = "None";
-    }, 1000);
-  }, 2000);
+    }, 500);
+  }, 1000);
   setTimeout(() => {
     sec2.style.display = "Flex";
     setTimeout(() => (sec2.style.opacity = "1"), 500);
-  }, 3000);
+  }, 1500);
   setTimeout(() => {
     sec2n3.style.top = "25.5%";
     sec3.style.display = "Flex";
     sec3.style.transform = "scale(0.8)";
-    setTimeout(() => (sec3.style.opacity = "0.5"), 1000);
+    setTimeout(() => (sec3.style.opacity = "0.5"), 500);
 
     sec2.addEventListener("mouseenter", () => {
       sec2n3.style.top = "25.5%";
@@ -44,7 +44,7 @@ const gameLoad = () => {
       sec2.style.opacity = "0.5";
       sec3.style.opacity = "1";
     });
-  }, 4000);
+  }, 3000);
 };
 
 gameLoad();
@@ -62,7 +62,6 @@ let card3 = document.querySelector(".card_3");
 let clue_title = card3.querySelector(".click_text");
 let clues = document.querySelector(".clues");
 
-
 /*  CLICKING CLUE(S) */
 
 let card3_click1_basics = () => {
@@ -77,18 +76,18 @@ const handleClueCardClick = (card) => {
 
   card3.style.height = "150px";
   card3.style.width = "760px";
-  clue_title.style.transition = "left 2s ease, opacity 1s ease";
+  clue_title.style.transition = "left 1s ease, opacity 0.7s ease";
   clue_title.style.left = "-100%";
   clue_title.style.opacity = "0";
 
   setTimeout(() => {
     clues.style.display = "flex";
-  }, 1000);
+  }, 800);
   setTimeout(() => {
     clue_title.style.display = "none";
-    clues.style.transition = "opacity 2s ease";
+    // clues.style.transition = "opacity 0.5s ease";
     clues.style.opacity = "1";
-  }, 1500);
+  }, 1000);
 };
 
 /*
@@ -98,6 +97,7 @@ CLUES CAROUSEL
 */
 
 let currentIndex = 0;
+const viewedClues = [];
 
 const clue = document.querySelectorAll(".clue");
 
@@ -115,6 +115,9 @@ const showNextClue = () => {
   if (currentIndex < clue.length - 1) {
     currentIndex++;
     showClue(currentIndex);
+    if (!viewedClues.includes(currentIndex)) {
+      viewedClues.push(currentIndex);
+    }
   }
 };
 
@@ -152,8 +155,8 @@ const showVerdict = (verdict, v) => {
     sec2n3.style.display = "none";
     sec4.style.display = "flex";
     setTimeout(() => (emoji.style.transform = "scale(0.5)"), 100);
-  }, 2000);
-  setTimeout(() => (emoji.style.transform = "scale(0.2)"), 3000);
+  }, 1000);
+  setTimeout(() => (emoji.style.transform = "scale(0.2)"), 2000);
 
   const verdicts = {
     0: "How did you know 200 dogs showed up just because he’s a dog lover?",
@@ -173,7 +176,7 @@ const showVerdict = (verdict, v) => {
     setTimeout(() => {
       if (isCluesSeen == true) {
         if (verdict.style.background == "yellowgreen") {
-          switch (currentIndex) {
+          switch (Math.max(...viewedClues)) {
             case 0:
               verdict_info.innerHTML = verdicts[0];
               break;

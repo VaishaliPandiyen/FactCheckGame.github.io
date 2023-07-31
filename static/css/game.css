@@ -53,7 +53,7 @@ SEC 2
   position: relative;
   top: auto;
   opacity: 1;
-  transition: top 1s ease, opacity 2s ease;
+  transition: top 1s ease, opacity 1.5s ease;
 }
 .s {
   height: 300px;
@@ -78,7 +78,7 @@ SEC 2
   flex-wrap: wrap;
 
   opacity: 0;
-  transition: opacity 2s ease, transform 1.5s;
+  transition: opacity 1s ease, transform 1s;
 }
 /* 
 
@@ -93,7 +93,7 @@ SEC 3
   align-items: center;
 
   opacity: 0;
-  transition: opacity 3s ease, transform 1.5s;
+  transition: opacity 1s ease, transform 1s;
 }
 .card_2,
 .card_3 {
@@ -169,7 +169,7 @@ SEC 3
   position: relative;
   font-family: sans-serif;
   height: 50px;
-  transition: height 2s, width 2s;
+  transition: height 1s, width 1s;
 }
 .card_3:hover {
   background: linear-gradient(to right, orange, rgb(252, 178, 41));
@@ -201,7 +201,7 @@ CLUES CAROUSEL
   align-items: center;
 
   opacity: 0;
-  transition: opacity 2s ease;
+  transition: opacity 1.3s ease;
   z-index: 1;
   
   cursor: default;
@@ -269,7 +269,7 @@ SEC 4
   width: 400px;
   border-radius: 0.8rem;
 
-  transition: opacity 2s ease, background 1s ease, border 1s ease;
+  transition: opacity 1.5s ease, background 1s ease, border 1s ease;
 }
 #verdict_content {
   height: 400px;
@@ -280,7 +280,7 @@ SEC 4
   box-sizing: border-box;
 
   opacity: 0;
-  transition: opacity 2s ease;
+  transition: opacity 1.5s ease;
 }
 #verdict_title {
   font-size: 2.5rem;
