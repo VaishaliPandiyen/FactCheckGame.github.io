@@ -25,6 +25,10 @@ SEC 1
 
 
 */
+.sec_1 {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
 .card_1 {
   background-color: orange;
   height: 400px;
