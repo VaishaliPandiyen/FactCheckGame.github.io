@@ -146,6 +146,22 @@ let end_action = document.getElementById("end_action");
 let g1c2a1s;
 let g1c2a1 = () => (g1c2a1s = true);
 
+const verdicts = {
+  0: "How did you know 200 dogs showed up just because he’s a dog lover?",
+  1: "BUT that didn’t say anything about 200 dogs!",
+  2: "The reel said he had 200 dogs for his birthday. BUT the number of likes and shares on a reel does not necessarily indicate whether the information in the reel is true!",
+  3: "A neighborhood app post by his family does sound credible. However…",
+  4: "Now it is good enough to be true!",
+};
+// To find the maximum key (property) in the verdicts object, get the keys as an array using Object.keys() and then use reduce() to find max value instead of Math.max(), as the keys in the  object are strings
+let v_n = Object.keys(verdicts).reduce(
+  (max, key) => (Number(key) > max ? Number(key) : max),
+  -Infinity
+);
+for (let i = 0; i <= v_n; i++) {
+  console.log(i);
+}
+
 const showVerdict = (verdict, v) => {
   sec2n3.style.opacity = "0";
   emoji.setAttribute("src", v ? "../img/sunglass.png" : "../img/what.png");
@@ -158,15 +174,6 @@ const showVerdict = (verdict, v) => {
   }, 1000);
   setTimeout(() => (emoji.style.transform = "scale(0.2)"), 2000);
 
-  const verdicts = {
-    0: "How did you know 200 dogs showed up just because he’s a dog lover?",
-    1: "BUT that didn’t say anything about 200 dogs!",
-    2.1: "The reel said he had 200 dogs for his birthday.",
-    2.2: "BUT the number of likes and shares on a reel does not necessarily indicate whether the information in the reel is true!",
-    3: "A neighborhood app post by his family does sound credible. However…",
-    4: "Now it is good enough to be true!",
-  };
-
   setTimeout(() => {
     const { style } = verdict;
     style.background = v ? "yellowgreen" : "orangered";
@@ -176,25 +183,26 @@ const showVerdict = (verdict, v) => {
     setTimeout(() => {
       if (isCluesSeen == true) {
         if (verdict.style.background == "yellowgreen") {
-          switch (Math.max(...viewedClues)) {
-            case 0:
-              verdict_info.innerHTML = verdicts[0];
-              break;
-            case 1:
-              verdict_info.innerHTML = verdicts[1];
-              break;
-            case 2:
-              g1c2a1s == true
-                ? (verdict_info.innerHTML = verdicts[2.1])
-                : (verdict_info.innerHTML = verdicts[2.2]);
-              break;
-            case 3:
-              verdict_info.innerHTML = verdicts[3];
-              break;
-            case 4:
-              verdict_info.innerHTML = verdicts[4];
-              break;
-          }
+          verdict_info.innerHTML = verdicts[Math.max(...viewedClues)];
+          // switch (Math.max(...viewedClues)) {
+          //   case 0:
+          //     verdict_info.innerHTML = verdicts[0];
+          //     break;
+          //   case 1:
+          //     verdict_info.innerHTML = verdicts[1];
+          //     break;
+          //   case 2:
+          //     g1c2a1s == true
+          //       ? (verdict_info.innerHTML = verdicts[2][2.1])
+          //       : (verdict_info.innerHTML = verdicts[2][2.2]);
+          //     break;
+          //   case 3:
+          //     verdict_info.innerHTML = verdicts[3];
+          //     break;
+          //   case 4:
+          //     verdict_info.innerHTML = verdicts[4];
+          //     break;
+          // }
         } else if (verdict.style.background == "orangered") {
           // responses for false(s)
         }
