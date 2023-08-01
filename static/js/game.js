@@ -148,6 +148,8 @@ const loadClaimInfo = async (n) => {
   clueWrapper.querySelectorAll(".clue")[0].classList.add("active");
 };
 
+// FIGURE OUT: HOW TO TOGGLE ACTIVE CLASS AFTER LOADING THE CONTENT THIS WAY (OR FIND ANOTHER WAY) -- Situ: Can't toggle it off from the first clue 
+
 // playBtn.addEventListener("click", () => {
 //   n = 0;
 //   loadClaimInfo();
