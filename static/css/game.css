@@ -12,7 +12,6 @@ body {
   overflow: hidden;
 }
 .game_wrapper,
-.claim_wrapper,
 .s {
   display: flex;
   justify-content: center;
@@ -37,12 +36,12 @@ SEC 1
   margin: 40px;
   border-radius: 0.1rem;
   border: 5px inset rgba(255, 166, 0, 0.3);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.claim_wrapper {
-  height: 100%;
-  width: 100%;
-}
-.claim_num {
+#c_no {
   font-family: "bangers";
   font-size: 4rem;
 }
@@ -113,15 +112,19 @@ SEC 3
   align-items: center;
 }
 .c {
+  height: 100%;
   width: 150px;
   background: orange;
   color: rgb(0, 0, 0, 0.8);
   font-size: 2.5rem;
-  /* font-family: "bangers"; */
   font-family: sans-serif;
   text-transform: uppercase;
   font-weight: 700;
   box-sizing: border-box;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .claim {
   width: 500px;
@@ -148,10 +151,10 @@ SEC 3
   justify-content: center;
   align-items: center;
 }
-.tick {
+#tick {
   background: rgba(0, 128, 0, 0.8);
 }
-.cross {
+#cross {
   background: rgba(255, 0, 0, 0.8);
 }
 .select > div > img {

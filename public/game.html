@@ -14,12 +14,8 @@
         <a href="../index.html"><img style="height: 2rem; width: 2rem; margin: 20px 10px;" src="../img/leftChev.png"
                 alt="Home"></a>
         <div class="game_wrapper">
-            <div class="sec_1">
-                <div class="card_1">
-                    <div class="claim_wrapper">
-                        <p class="claim_num" id="c_no"></p>
-                    </div>
-                </div>
+            <div class="sec_1 card_1">
+                <p id="c_no"></p>
             </div>
             <div class="sec_2_and_3">
                 <div class="sec_2" style="display: none;">
@@ -34,7 +30,7 @@
                 </div>
                 <div class="sec_3" style="display: none;">
                     <div class="card_2">
-                        <div class="claim_wrapper c">
+                        <div class="c">
                             <p>Claim</p>
                         </div>
                         <div class="claim">
@@ -42,23 +38,23 @@
                             </p>
                         </div>
                         <div class="select">
-                            <div class="tick" onclick="tf(true)">
+                            <div id="tick">
                                 <img src="../img/tick.png" alt="True">
                             </div>
-                            <div class="cross" onclick="tf(false)">
+                            <div id="cross">
                                 <img src="../img/cross.png" alt="True">
                             </div>
                         </div>
                     </div>
-                    <div class="card_3" onclick="handleClueCardClick(this)">
+                    <div class="card_3">
                         <p class="click_text">View Clues
                             <span>(and sources)</span>
                         </p>
                         <div class="clues" style="display: none;">
-                            <img src="../img/DoubleLeftChev.png" class="nav_clue" onclick="showPreviousClue()">
+                            <img src="../img/DoubleLeftChev.png" class="nav_clue" id="showPrev">
                             <div class="i_container">
                             </div>
-                            <img src="../img/DoubleRightChev.png" class="nav_clue" onclick="showNextClue()">
+                            <img src="../img/DoubleRightChev.png" class="nav_clue" id="showNext">
                         </div>
                     </div>
                 </div>
@@ -71,14 +67,13 @@
                         <p id="verdict_info"></p>
                     </div>
                     <div id="source">
-                        <p><a
-                                href="https://www.politifact.com/factchecks/2023/jul/06/facebook-posts/good-enough-to-be-true-mans-100th-birthday-dog-par/">Politifact</a>
-                            says the claim is <span id="src_verdict">"Good Enough To Be True"</span></p>
+                        <p><a id="v_srcLink" href=""><span id="v_srcTitle"></span></a>
+                            says the claim is <span id="v"></span></p>
                     </div>
                 </div>
                 <div id="end_action">
-                    <button onclick="more()">Play more</button>
-                    <button onclick="exit()">Exit</button>
+                    <button id="more">Play more</button>
+                    <button id="exit">Exit</button>
                 </div>
             </div>
         </div>

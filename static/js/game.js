@@ -86,11 +86,8 @@ const c_who = document.getElementById("c_who");
 const c_when = document.getElementById("c_when");
 const c_what = document.getElementById("c_what");
 
-// const playBtn = document.getElementById("playBtn");
-
-// let n;
-
 let n = 0;
+let claims;
 
 let clueWrapper = document.querySelector(".i_container");
 
@@ -98,208 +95,196 @@ let click_texts = document.querySelectorAll(".click_text");
 
 let card3 = document.querySelector(".card_3");
 let clue_title = card3.querySelector(".click_text");
-let clues = document.querySelector(".clues");
+let clues_wrapper = document.querySelector(".clues");
+let showPrev = document.getElementById("showPrev");
+let showNext = document.getElementById("showNext");
 let card3_click1_basics = () => {
   clue_title.opacity = "0";
 };
 
-let isCluesSeen = false;
-
-let currentIndex = 0;
-const viewedClues = [];
-
-const clue = document.querySelectorAll(".clue");
-
+let tick = document.getElementById("tick");
+let cross = document.getElementById("cross");
 let emoji = document.getElementById("emoji");
-let verdict = document.getElementById("verdict");
+let verdict_container = document.getElementById("verdict");
 let verdict_title = document.getElementById("verdict_title");
 let verdict_content = document.getElementById("verdict_content");
 let verdict_info = document.getElementById("verdict_info");
+let v_srcLink = document.getElementById("v_srcLink");
+let v_srcTitle = document.getElementById("v_srcTitle");
+let v = document.getElementById("v");
 let end_action = document.getElementById("end_action");
+let exit = document.getElementById("exit");
+let moreClaims = document.getElementById("more");
 
-const loadClaimInfo = async (n) => {
+async function loadClaimInfo(n) {
   try {
-    const claims = await getClaimsArray();
+    claims = await getClaimsArray();
+
     if (claims && claims.length > n) {
       c = claims[n];
+
       c_no.innerHTML = `Claim ${c["id"]}`;
       c_who.innerHTML = c["involves"];
       c_what.innerHTML = c["background"];
       c_when.innerHTML = c["claim"];
-      // console.log(c["clues"]);
+
+      /*
+
+      CLUES :
+
+      */
+
       let clues = c["clues"];
       for (let eachClue in clues) {
         let p = document.createElement("p");
         p.setAttribute("class", "clue");
         p.innerHTML = clues[eachClue];
         clueWrapper.appendChild(p);
-        // if (eachClue == 0) {
-        //   p.setAttribute("class", "active");
-        // }
       }
-      // console.log(clue);
+      clueWrapper.querySelectorAll(".clue")[0].classList.add("active");
+      let clue = document.querySelectorAll(".clue");
+      let isCluesSeen = false;
+      let currentIndex = 0;
+      const viewedClues = [0];
+
+      card3.addEventListener("click", () => {
+        isCluesSeen = true;
+        card3_click1_basics();
+
+        card3.style.height = "150px";
+        card3.style.width = "760px";
+        clue_title.style.transition = "left 1s ease, opacity 0.7s ease";
+        clue_title.style.left = "-100%";
+        clue_title.style.opacity = "0";
+
+        setTimeout(() => {
+          clues_wrapper.style.display = "flex";
+        }, 800);
+        setTimeout(() => {
+          clue_title.style.display = "none";
+          clues_wrapper.style.opacity = "1";
+        }, 1000);
+      });
+
+      const showClue = (index) => {
+        clue.forEach((c, i) => {
+          if (i === index) {
+            c.classList.add("active");
+          } else {
+            c.classList.remove("active");
+          }
+        });
+      };
+
+      showNext.addEventListener("click", () => {
+        if (currentIndex < clue.length - 1) {
+          currentIndex++;
+          showClue(currentIndex);
+          if (!viewedClues.includes(currentIndex)) {
+            viewedClues.push(currentIndex);
+          }
+        }
+      });
+      showPrev.addEventListener("click", () => {
+        if (currentIndex > 0) {
+          currentIndex--;
+          showClue(currentIndex);
+        }
+      });
+
+      /*
+
+      VERDICT & RESPONSES :
+
+      */
+
+      let responses = c["responses"];
+      let verdict = responses["verdict"];
+      let trueBtnRes = responses["trueBtn"];
+      let falseBtnRes = responses["falseBtn"];
+      let bool = verdict["boolean"];
+      v.innerHTML = `"${verdict["v"]}"`;
+      v_srcLink.setAttribute("href", verdict["source"]["link"]);
+      v_srcTitle.innerHTML = verdict["source"]["title"];
       gameLoad();
+
+      const showVerdict = (verdict_container, v) => {
+        sec2n3.style.opacity = "0";
+        emoji.setAttribute(
+          "src",
+          v ? "../img/sunglass.png" : "../img/what.png"
+        );
+        verdict_title.innerHTML = v ? "That's right" : "You missed that!";
+
+        setTimeout(() => {
+          sec2n3.style.display = "none";
+          sec4.style.display = "flex";
+          setTimeout(() => (emoji.style.transform = "scale(0.5)"), 100);
+        }, 1000);
+        setTimeout(() => (emoji.style.transform = "scale(0.2)"), 2000);
+
+        setTimeout(() => {
+          const { style } = verdict_container;
+          style.background = v ? "yellowgreen" : "orangered";
+          style.border = v ? "3px solid green" : "5px solid red";
+          verdict_content.style.opacity = "1";
+          end_action.style.opacity = "1";
+          setTimeout(() => {
+            if (isCluesSeen == true) {
+              if (verdict_container.style.background == "yellowgreen") {
+                verdict_info.innerHTML =
+                  trueBtnRes[`${Math.max(...viewedClues)}`];
+              } else {
+                verdict_info.innerHTML =
+                  falseBtnRes[`${Math.max(...viewedClues)}`];
+              }
+            } else {
+              // response for not viewing clues
+            }
+          }, 500);
+        }, 3500);
+      };
+
+      tick.addEventListener("click", () =>
+        showVerdict(verdict_container, bool)
+      );
+      cross.addEventListener("click", () =>
+        showVerdict(verdict_container, !bool)
+      );
     } else {
       console.log("Claims array is empty or couldn't be fetched.");
     }
   } catch (error) {
     console.error("Error:", error);
   }
-  clueWrapper.querySelectorAll(".clue")[0].classList.add("active");
-};
-
-// FIGURE OUT: HOW TO TOGGLE ACTIVE CLASS AFTER LOADING THE CONTENT THIS WAY (OR FIND ANOTHER WAY) -- Situ: Can't toggle it off from the first clue 
-
-// playBtn.addEventListener("click", () => {
-//   n = 0;
-//   loadClaimInfo();
-// });
+}
 
 loadClaimInfo(n);
 
-const handleClueCardClick = (card) => {
-  isCluesSeen = true;
-  card3_click1_basics();
-
-  card3.style.height = "150px";
-  card3.style.width = "760px";
-  clue_title.style.transition = "left 1s ease, opacity 0.7s ease";
-  clue_title.style.left = "-100%";
-  clue_title.style.opacity = "0";
-
-  setTimeout(() => {
-    clues.style.display = "flex";
-  }, 800);
-  setTimeout(() => {
-    clue_title.style.display = "none";
-    // clues.style.transition = "opacity 0.5s ease";
-    clues.style.opacity = "1";
-  }, 1000);
-};
-
-const showClue = (index) => {
-  clue.forEach((clue, i) => {
-    if (i === index) {
-      clue.classList.add("active");
-    } else {
-      clue.classList.remove("active");
-    }
-  });
-};
-
-const showNextClue = () => {
-  if (currentIndex < clue.length - 1) {
-    currentIndex++;
-    showClue(currentIndex);
-    if (!viewedClues.includes(currentIndex)) {
-      viewedClues.push(currentIndex);
-    }
-  }
-};
-
-const showPreviousClue = () => {
-  if (currentIndex > 0) {
-    currentIndex--;
-    showClue(currentIndex);
-  }
-};
-
-// let g1c2a1s;
-// let g1c2a1 = () => (g1c2a1s = true);
-
-const verdicts = {
-  0: "How did you know 200 dogs showed up just because he’s a dog lover?",
-  1: "BUT that didn’t say anything about 200 dogs!",
-  2: "The reel said he had 200 dogs for his birthday. BUT the number of likes and shares on a reel does not necessarily indicate whether the information in the reel is true!",
-  3: "A neighborhood app post by his family does sound credible. However…",
-  4: "Now it is good enough to be true!",
-};
-
-// To find the maximum key (property) in the verdicts object, get the keys as an array using Object.keys() and then use reduce() to find max value instead of Math.max(), as the keys in the  object are strings
-let v_n = Object.keys(verdicts).reduce(
-  (max, key) => (Number(key) > max ? Number(key) : max),
-  -Infinity
-);
-// for (let i = 0; i <= v_n; i++) {
-//   console.log(i);
-// }
-
-const showVerdict = (verdict, v) => {
-  sec2n3.style.opacity = "0";
-  emoji.setAttribute("src", v ? "../img/sunglass.png" : "../img/what.png");
-  verdict_title.innerHTML = v ? "That's right" : "You missed that!";
-
-  setTimeout(() => {
-    sec2n3.style.display = "none";
-    sec4.style.display = "flex";
-    setTimeout(() => (emoji.style.transform = "scale(0.5)"), 100);
-  }, 1000);
-  setTimeout(() => (emoji.style.transform = "scale(0.2)"), 2000);
-
-  setTimeout(() => {
-    const { style } = verdict;
-    style.background = v ? "yellowgreen" : "orangered";
-    style.border = v ? "3px solid green" : "5px solid red";
-    verdict_content.style.opacity = "1";
-    end_action.style.opacity = "1";
-    setTimeout(() => {
-      if (isCluesSeen == true) {
-        if (verdict.style.background == "yellowgreen") {
-          verdict_info.innerHTML = verdicts[Math.max(...viewedClues)];
-          // switch (Math.max(...viewedClues)) {
-          //   case 0:
-          //     verdict_info.innerHTML = verdicts[0];
-          //     break;
-          //   case 1:
-          //     verdict_info.innerHTML = verdicts[1];
-          //     break;
-          //   case 2:
-          //     g1c2a1s == true
-          //       ? (verdict_info.innerHTML = verdicts[2][2.1])
-          //       : (verdict_info.innerHTML = verdicts[2][2.2]);
-          //     break;
-          //   case 3:
-          //     verdict_info.innerHTML = verdicts[3];
-          //     break;
-          //   case 4:
-          //     verdict_info.innerHTML = verdicts[4];
-          //     break;
-          // }
-        } else if (verdict.style.background == "orangered") {
-          // responses for false(s)
-        }
-      } else {
-        // response for not viewing clues
-      }
-    }, 500);
-  }, 3500);
-};
-
-const tf = (v) => showVerdict(verdict, v);
-
-/* ----------------------------------------------------- */
-
 /*
 
-OTHERS
+MORE & EXIT
 
 */
 
-const exit = () => setTimeout(() => (window.location.href = "play.html"), 1000);
+const exitGame = () =>
+  setTimeout(() => (window.location.href = "play.html"), 1000);
 
-const more = async () => {
-  n = 1;
+const moreClaimsClickHandler = async (n, claims) => {
+  n++;
+  console.log(n, claims.length);
   try {
-    const claims = await getClaimsArray();
-    console.log(claims[n]["id"]);
     if (n < claims.length) {
-      await showClaim(n);
+      await loadClaimInfo(n);
     } else {
-      exit();
+      exitGame();
     }
   } catch (error) {
     console.error("Error fetching claims:", error);
-    exit();
+    exitGame();
   }
-  setTimeout(() => (window.location.href = "game.html"), 1000);
 };
+
+exit.addEventListener("click", () => exitGame());
+
+moreClaims.addEventListener("click", () => moreClaimsClickHandler(n, claims));
