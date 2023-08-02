@@ -94,7 +94,7 @@ let clueWrapper = document.querySelector(".i_container");
 let click_texts = document.querySelectorAll(".click_text");
 
 let card3 = document.querySelector(".card_3");
-let clue_title = card3.querySelector(".click_text");
+let clue_title = document.querySelector(".click_text");
 let clues_wrapper = document.querySelector(".clues");
 let showPrev = document.getElementById("showPrev");
 let showNext = document.getElementById("showNext");
