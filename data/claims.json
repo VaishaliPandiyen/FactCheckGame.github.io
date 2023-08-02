@@ -1,0 +1,114 @@
+{
+  "claims": [
+    {
+      "id": "01",
+      "involves": "Robert Moore, a retired university dean who lives in San Jose, California",
+      "background": "To celebrate his 100th birthday, his family invited neighbours to line up with their dogs outside a family home. ",
+      "claim": "Over 200 dogs showed up and lined up around the block to wish Robert a happy birthday.",
+      "clues": {
+        "0": "Robert Moore is a dog lover.",
+        "1": "The dogs wore their birthday best — <br> tuxedos\nand mini cowboy hats — and came with cards, flowers, cupcakes \nand,\nof\n\n  course, doggy kisses.",
+        "2": "A Facebook <a href=\"https://www.facebook.com/reel/220703114242927\" onclick=\"g1c2a1()\">reel</a> with photos and videos of Moore’s big day \n got over 440,000 likes and 90,000 shares",
+        "3": "His family posted on the neighbourhood app <a href=\"https://nextdoor.com/p/c5QS5RD7rdhj\">Nextdoor</a> and Facebook, \n asking dog owners to stop by with their canines for a pet parade.",
+        "4": "Moore’s daughter Alison Moore, <a href=\"https://www.washingtonpost.com/lifestyle/2023/06/23/dog-pet-parade-100-birthday/\">told The Washington Post</a> that her father has loved dogs all his life and wants to pet each one he sees."
+      },
+      "responses": {
+        "verdict": {
+          "boolean": true,
+          "v": "Good Enough To Be True",
+          "source": {
+            "link": "https://www.politifact.com/factchecks/2023/jul/06/facebook-posts/good-enough-to-be-true-mans-100th-birthday-dog-par/",
+            "title": "Politifact"
+          }
+        },
+        "trueBtn": {
+          "0": "How did you know 200 dogs showed up just because he’s a dog lover?",
+          "1": "BUT that didn’t say anything about 200 dogs!",
+          "2": "The reel said he had 200 dogs for his birthday. BUT the number of likes and shares on a reel does not necessarily indicate whether the information in the reel is true!",
+          "3": "A neighborhood app post by his family does sound credible. However…",
+          "4": "Now it is good enough to be true!"
+        },
+        "falseBtn": {
+          "0": "1",
+          "1": "2",
+          "2": "3",
+          "3": "4",
+          "4": "5"
+        }
+      }
+    },
+    {
+      "id": "02",
+      "involves": "Jane Smith",
+      "background": "",
+      "claim": "",
+      "clues": {
+        "0": "Robert Moore is a dog lover.",
+        "1": "The dogs wore their birthday best — <br> tuxedos\nand mini cowboy hats — and came with cards, flowers, cupcakes \nand,\nof\n\n  course, doggy kisses.",
+        "2": "A Facebook <a href=\"https://www.facebook.com/reel/220703114242927\" onclick=\"g1c2a1()\">reel</a> with photos and videos of Moore’s big day \n got over 440,000 likes and 90,000 shares",
+        "3": "His family posted on the neighbourhood app <a href=\"https://nextdoor.com/p/c5QS5RD7rdhj\">Nextdoor</a> and Facebook, \n asking dog owners to stop by with their canines for a pet parade.",
+        "4": "Moore’s daughter Alison Moore, <a href=\"https://www.washingtonpost.com/lifestyle/2023/06/23/dog-pet-parade-100-birthday/\">told The Washington Post</a> that her father has loved dogs all his life and wants to pet each one he sees."
+      },
+      "responses": {
+        "verdict": {
+          "boolean": true,
+          "v": "Good Enough To Be True",
+          "source": {
+            "link": "https://www.politifact.com/factchecks/2023/jul/06/facebook-posts/good-enough-to-be-true-mans-100th-birthday-dog-par/",
+            "title": "Politifact"
+          }
+        },
+        "trueBtn": {
+          "0": "How did you know 200 dogs showed up just because he’s a dog lover?",
+          "1": "BUT that didn’t say anything about 200 dogs!",
+          "2": "The reel said he had 200 dogs for his birthday. BUT the number of likes and shares on a reel does not necessarily indicate whether the information in the reel is true!",
+          "3": "A neighborhood app post by his family does sound credible. However…",
+          "4": "Now it is good enough to be true!"
+        },
+        "falseBtn": {
+          "0": "1",
+          "1": "2",
+          "2": "3",
+          "3": "4",
+          "4": "5"
+        }
+      }
+    },
+    {
+      "id": "03",
+      "involves": "Bob Johnson",
+      "background": "",
+      "claim": "", "clues": {
+        "0": "Robert Moore is a dog lover.",
+        "1": "The dogs wore their birthday best — <br> tuxedos\nand mini cowboy hats — and came with cards, flowers, cupcakes \nand,\nof\n\n  course, doggy kisses.",
+        "2": "A Facebook <a href=\"https://www.facebook.com/reel/220703114242927\" onclick=\"g1c2a1()\">reel</a> with photos and videos of Moore’s big day \n got over 440,000 likes and 90,000 shares",
+        "3": "His family posted on the neighbourhood app <a href=\"https://nextdoor.com/p/c5QS5RD7rdhj\">Nextdoor</a> and Facebook, \n asking dog owners to stop by with their canines for a pet parade.",
+        "4": "Moore’s daughter Alison Moore, <a href=\"https://www.washingtonpost.com/lifestyle/2023/06/23/dog-pet-parade-100-birthday/\">told The Washington Post</a> that her father has loved dogs all his life and wants to pet each one he sees."
+      },
+      "responses": {
+        "verdict": {
+          "boolean": true,
+          "v": "Good Enough To Be True",
+          "source": {
+            "link": "https://www.politifact.com/factchecks/2023/jul/06/facebook-posts/good-enough-to-be-true-mans-100th-birthday-dog-par/",
+            "title": "Politifact"
+          }
+        },
+        "trueBtn": {
+          "0": "How did you know 200 dogs showed up just because he’s a dog lover?",
+          "1": "BUT that didn’t say anything about 200 dogs!",
+          "2": "The reel said he had 200 dogs for his birthday. BUT the number of likes and shares on a reel does not necessarily indicate whether the information in the reel is true!",
+          "3": "A neighborhood app post by his family does sound credible. However…",
+          "4": "Now it is good enough to be true!"
+        },
+        "falseBtn": {
+          "0": "1",
+          "1": "2",
+          "2": "3",
+          "3": "4",
+          "4": "5"
+        }
+      }
+    }
+  ]
+}
