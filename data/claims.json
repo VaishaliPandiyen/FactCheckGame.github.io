@@ -15,70 +15,68 @@
       "responses": {
         "verdict": {
           "boolean": true,
-          "v": "Good Enough To Be True",
+          "v": "True",
           "source": {
             "link": "https://www.politifact.com/factchecks/2023/jul/06/facebook-posts/good-enough-to-be-true-mans-100th-birthday-dog-par/",
             "title": "Politifact"
           }
         },
         "trueBtn": {
-          "0": "How did you know 200 dogs showed up just because he’s a dog lover?",
-          "1": "BUT that didn’t say anything about 200 dogs!",
-          "2": "The reel said he had 200 dogs for his birthday. BUT the number of likes and shares on a reel does not necessarily indicate whether the information in the reel is true!",
-          "3": "A neighborhood app post by his family does sound credible. However…",
-          "4": "Now it is good enough to be true!"
+          "0": "Being a dog lover doesn't mean there were 200 dogs at the birthday party!<br><br> It's essential to check for more evidence to confirm the claim's accuracy.",
+          "1": "Nice outfits, but the clue didn’t tell us about the birthday party or if there were 200 dogs!",
+          "2": "The reel and tweet said he had 200 dogs for his birthday. BUT the number of likes and shares on a reel does not necessarily indicate whether the information in the reel is true! <br><br> Tip: Keep investigating till you get more reliable information.",
+          "3": "A neighbourhood app post by his family sounds credible but only tells us that they invited dog owners for a pet parade!",
+          "4": "The article mentions that more than 200 dogs showed up for the birthday celebration! Based on this evidence from The Washington Post, the claim that over 200 dogs attended the party is considered 'Good enough to be true.'"
         },
         "falseBtn": {
-          "0": "1",
-          "1": "2",
-          "2": "3",
-          "3": "4",
-          "4": "5"
+          "0": "The clue didn’t tell us about the birthday party nor if there were 200 dogs to verify the claim!",
+          "1": "Nice outfits, but the clue didn’t tell us about the birthday party or if there were 200 dogs!",
+          "2": "Although the number of likes and shares on a reel does not necessarily indicate whether the information in the reel is true, the reel and tweet said he had 200 dogs for his birthday! <br><br> Tip: Keep investigating till you get more reliable information.",
+          "3": "The neighbourhood app post by his family sounds credible but only tells us that they invited dog owners for a pet parade!  <br><br>  Keep investigating till you get relevant information!",
+          "4": "The article mentions that more than 200 dogs showed up for the birthday celebration! Based on this evidence from The Washington Post, the claim that over 200 dogs attended the party is considered 'Good enough to be true.'"
         }
       }
     },
     {
       "id": "02",
-      "involves": "Jane Smith",
-      "background": "",
-      "claim": "",
+      "involves": "Protestors",
+      "background": "In June 2023, <a href=\"https://www.nytimes.com/2023/07/03/world/europe/france-nanterre-unrest-nahel-merzouk.html\">protests</a> erupted across France following the fatal police shooting of a teen.",
+      "claim": "Protestors released animals out of the zoo.",
       "clues": {
-        "0": "Robert Moore is a dog lover.",
-        "1": "The dogs wore their birthday best — <br> tuxedos\nand mini cowboy hats — and came with cards, flowers, cupcakes \nand,\nof\n\n  course, doggy kisses.",
-        "2": "A Facebook <a href=\"https://www.facebook.com/reel/220703114242927\" onclick=\"g1c2a1()\">reel</a> with photos and videos of Moore’s big day \n got over 440,000 likes and 90,000 shares",
-        "3": "His family posted on the neighbourhood app <a href=\"https://nextdoor.com/p/c5QS5RD7rdhj\">Nextdoor</a> and Facebook, \n asking dog owners to stop by with their canines for a pet parade.",
-        "4": "Moore’s daughter Alison Moore, <a href=\"https://www.washingtonpost.com/lifestyle/2023/06/23/dog-pet-parade-100-birthday/\">told The Washington Post</a> that her father has loved dogs all his life and wants to pet each one he sees."
+        "0": "A video montage of zebras, lions, wolves, ostriches, and elephants roaming free in neighbourhoods and streets was posted on Instagram.",
+        "1": "One video, which has over 1.8 million views on <a href=\"https://twitter.com/InsaneRealitys/status/1674596674558218241\">Twitter</a> alone, has been shared by an account called Insane Reality Leaks. The account has a blue “verified” check mark.",
+        "2": "Most videos shared on social media consist of a number of poor-quality clips apparently recorded using a mobile phone.",
+        "3": "There have been a lot of fakes during these riots, including videos showing a <a href=\"https://www.forbes.com/sites/mattnovak/2023/07/01/no-that-viral-video-of-a-sniper-isnt-from-the-riots-in-france/?sh=755fa3ca2ec5\">fake sniper</a>, a crowd in <a href=\"https://www.forbes.com/sites/mattnovak/2023/07/02/viral-video-showing-massive-crowd-in-france-actually-from-mexico/\">Mexico City</a> and a stolen police van that’s actually <a href=\"https://www.forbes.com/sites/mattnovak/2023/07/02/viral-photo-of-stolen-police-van-in-france-actually-from-netflix-movie/?sh=5daf2cbe527f\">from a Netflix movie</a>."
       },
       "responses": {
         "verdict": {
-          "boolean": true,
-          "v": "Good Enough To Be True",
+          "boolean": false,
+          "v": "False",
           "source": {
-            "link": "https://www.politifact.com/factchecks/2023/jul/06/facebook-posts/good-enough-to-be-true-mans-100th-birthday-dog-par/",
+            "link": "https://www.politifact.com/factchecks/2023/jul/07/instagram-posts/lions-tigers-and-bears-on-the-streets-of-paris-no/",
             "title": "Politifact"
           }
         },
         "trueBtn": {
-          "0": "How did you know 200 dogs showed up just because he’s a dog lover?",
-          "1": "BUT that didn’t say anything about 200 dogs!",
-          "2": "The reel said he had 200 dogs for his birthday. BUT the number of likes and shares on a reel does not necessarily indicate whether the information in the reel is true!",
-          "3": "A neighborhood app post by his family does sound credible. However…",
-          "4": "Now it is good enough to be true!"
+          "0": "Many of the video clips are old or from different places, inside and outside of France. <br><br> The Paris Zoological Park also <a href=\"https://twitter.com/zoodeparis/status/1675819364342169601\">resonded</a> on Twitter, reassuring that all the animals are safe.",
+          "1": "Since Twitter stopped user verification after Elon Musk's purchase in October 2022, the presence of a ‘verified’ check mark on an account no longer guarantees the credibility of the content.",
+          "2": "Video quality and recorded device doesn’t provide evidence either supporting or refuting the claim. <br><br> Look for more relevant information!",
+          "3": "The mentioned “lot of fakes during these riots” does not talk about released zoo animals!"
         },
         "falseBtn": {
-          "0": "1",
-          "1": "2",
-          "2": "3",
-          "3": "4",
-          "4": "5"
+          "0": "Many of the video clips are old or from different places, inside and outside of France. <br><br> The Paris Zoological Park also <a href=\"https://twitter.com/zoodeparis/status/1675819364342169601\">resonded</a> on Twitter, reassuring that all the animals are safe.",
+          "1": "The Paris Zoological Park also <a href=\"https://twitter.com/zoodeparis/status/1675819364342169601\">resonded</a> on Twitter, reassuring that all the animals are safe.<br><br>  Many of the video clips are old or from different places, inside and outside of France. <br><br> Since Twitter stopped user verification after Elon Musk's purchase in October 2022, the presence of a ‘verified’ check mark on an account no longer guarantees the credibility of the content.",
+          "2": "The Paris Zoological Park also <a href=\"https://twitter.com/zoodeparis/status/1675819364342169601\">resonded</a> on Twitter, reassuring that all the animals are safe.<br><br>  Many of the video clips are old or from different places, inside and outside of France. <br><br> Since Twitter stopped user verification after Elon Musk's purchase in October 2022, the presence of a ‘verified’ check mark on an account no longer guarantees the credibility of the content.",
+          "3": "Although video quality, recorded devices and other fake videos don’t support or refute the claim, many “animal release” videos are old or from different places, inside and outside of France. <br><br> The Paris Zoological Park also <a href=\"https://twitter.com/zoodeparis/status/1675819364342169601\">resonded</a> on Twitter, reassuring that all the animals are safe."
         }
       }
     },
     {
       "id": "03",
-      "involves": "Bob Johnson",
+      "involves": "Davyon Johnson, a sixth grader from Muskogee, Oklahoma",
       "background": "",
-      "claim": "", "clues": {
+      "claim": "",
+      "clues": {
         "0": "Robert Moore is a dog lover.",
         "1": "The dogs wore their birthday best — <br> tuxedos\nand mini cowboy hats — and came with cards, flowers, cupcakes \nand,\nof\n\n  course, doggy kisses.",
         "2": "A Facebook <a href=\"https://www.facebook.com/reel/220703114242927\" onclick=\"g1c2a1()\">reel</a> with photos and videos of Moore’s big day \n got over 440,000 likes and 90,000 shares",
