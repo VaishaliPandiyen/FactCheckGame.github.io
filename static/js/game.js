@@ -71,7 +71,7 @@ const gameLoad = () => {
       sec2.style.opacity = "0.5";
       sec3.style.opacity = "1";
     });
-  }, 5000); 
+  }, 5000);
 };
 
 /* ----------------------------------------------------- */
@@ -116,12 +116,13 @@ let end_action = document.getElementById("end_action");
 let exit = document.getElementById("exit");
 let moreClaims = document.getElementById("more");
 
-async function loadClaimInfo(n) {
+const loadClaimInfo = async (n) => {
   try {
     claims = await getClaimsArray();
-
+    
     if (claims && claims.length > n) {
       c = claims[n];
+      gameLoad();
 
       c_no.innerHTML = `Claim ${c["id"]}`;
       c_who.innerHTML = c["involves"];
@@ -206,7 +207,6 @@ async function loadClaimInfo(n) {
       v.innerHTML = `"${verdict["v"]}"`;
       v_srcLink.setAttribute("href", verdict["source"]["link"]);
       v_srcTitle.innerHTML = verdict["source"]["title"];
-      gameLoad();
 
       const showVerdict = (verdict_container, v) => {
         sec2n3.style.opacity = "0";
@@ -257,7 +257,7 @@ async function loadClaimInfo(n) {
   } catch (error) {
     console.error("Error:", error);
   }
-}
+};
 
 loadClaimInfo(n);
 
@@ -275,6 +275,7 @@ const moreClaimsClickHandler = async (n, claims) => {
   console.log(n, claims.length);
   try {
     if (n < claims.length) {
+      setTimeout(() => (sec4.style.display = "none"), 500);
       await loadClaimInfo(n);
     } else {
       exitGame();
