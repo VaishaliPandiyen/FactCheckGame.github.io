@@ -30,8 +30,28 @@ SEC 1
 
 */
 .sec_1 {
-  opacity: 0;
-  transition: opacity 0.5s ease;
+  animation-duration: 2s;
+  animation-fill-mode: both;
+  animation-name: fadeInOut1;
+  animation-delay: 0s;
+}
+@keyframes fadeInOut1 {
+  100% {
+    opacity: 0;
+    height: 0;
+    width: 0;
+    border: 0;
+    margin: 0;
+  }
+  95% {
+    opacity: 0;
+    height: 400px;
+    width: 400px;
+    border: 5px inset rgba(255, 166, 0, 0.3);
+  }
+  0%, 70% {
+    opacity: 1;
+  }
 }
 .card_1 {
   background-color: orange;
@@ -60,9 +80,10 @@ SEC 2
 .sec_2_and_3 {
   position: relative;
   top: auto;
-  opacity: 1;
-  transition: top 1s ease, opacity 1.5s ease;
+  height: 80vh;
+  max-width: 760px;
 }
+
 .s {
   height: 300px;
   width: 350px;
@@ -82,11 +103,29 @@ SEC 2
   font-size: 1.05rem;
 }
 .sec_2 {
-  display: none;
-  flex-wrap: wrap;
+  /* display: flex;
+  flex-wrap: wrap; */
+  color: aliceblue;
+  width: 760px;
 
-  opacity: 0;
-  transition: opacity 1s ease, transform 1s;
+  animation-duration: 5s;
+  animation-fill-mode: both;
+  animation-name: fadeInOut2;
+  animation-delay: 2s;
+}
+@keyframes fadeInOut2 {
+  0% {
+    opacity: 0;
+    height: 0;
+    width: 0;
+  }
+  1% {
+    height: auto;
+    width: 760px;
+  }
+  20%, 100% {
+    opacity: 1;
+  }
 }
 /* 
 
@@ -96,13 +135,30 @@ SEC 3
 
 */
 .sec_3 {
-  display: none;
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 
-  opacity: 0;
-  transition: opacity 1s ease, transform 1s;
+  animation-duration: 5s;
+  animation-fill-mode: both;
+  animation-name: fadeInOut3;
+  animation-delay: 3s;
+}
+@keyframes fadeInOut3 {
+  0% {
+    opacity: 0;
+    height: 0;
+    width: 0;
+  }
+  10% {
+    opacity: 0;
+    height: auto;
+    width: auto;
+  }
+  20%, 100% {
+    opacity: 1;
+  }
 }
 .card_2,
 .card_3 {
