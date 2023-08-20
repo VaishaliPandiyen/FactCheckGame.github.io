@@ -362,7 +362,8 @@ CLUES CAROUSEL
   display: none;
   margin: 0;
   padding: 10px;
-  font-size: 1rem;
+  font-size: 1.1rem;
+  font-style: italic;
   text-transform: none;
   font-weight: 400 !important;
 }
@@ -423,6 +424,11 @@ SEC 4
   padding: 50px 20px 20px 70px;
   box-sizing: border-box;
 
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+
   opacity: 0;
   transition: opacity 1.5s ease;
 }
@@ -437,6 +443,17 @@ SEC 4
   overflow-wrap: break-word;
   margin: 30px 30px 0 0;
   font-family: sans-serif;
+  text-align: justify;
+  background: #ffffff70;
+  padding: 15px 10px;
+  border-radius: 5px;
+  color: #000000bf;
+}
+#source {
+  font-family: sans-serif;
+  padding: 10px 0;
+  justify-self: flex-end;
+  margin-top: auto;
 }
 #end_action {
   display: flex;
@@ -465,13 +482,12 @@ SEC 4
   height: 100%;
   width: 100vw;
   position: absolute;
-  backdrop-filter: blur(5px);
 
   display: flex;
   justify-content: center;
   align-items: center;
 
-  animation-duration: 3s;
+  animation-duration: 2s;
   animation-fill-mode: both;
   animation-name: fadeInOut44;
   animation-delay: 0s;
@@ -492,9 +508,9 @@ SEC 4
     opacity: 0;
     height: 0;
   }
-  5%,
+  1%,
   95% {
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(10px);
     opacity: 1;
     height: 100%;
   }

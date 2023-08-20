@@ -126,6 +126,7 @@ const loadClaimInfo = async (n) => {
 
         card3.style.height = "150px";
         card3.style.width = "760px";
+        card3.style.transition = "height 1s, width 1s"
         clue_title.style.transition = "left 1s ease, opacity 0.7s ease";
         clue_title.style.left = "-100%";
         clue_title.style.opacity = "0";
