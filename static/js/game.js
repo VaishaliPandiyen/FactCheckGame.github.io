@@ -33,11 +33,11 @@ ON GAME LOAD
 */
 
 let game_wrapper = document.querySelector(".game_wrapper");
-let sec1 = document.querySelector(".sec_1");
-let sec2 = document.querySelector(".sec_2");
-let sec3 = document.querySelector(".sec_3");
+let sec1 = document.querySelector(".s1");
+let sec2 = document.querySelector(".s2");
+let sec3 = document.querySelector(".s3");
 let sec2n3 = document.querySelector(".sec_2_and_3");
-let sec4 = document.querySelector(".sec_4");
+let sec4 = document.querySelector(".s4");
 
 const gameLoad = async () => {
   sec2.style.opacity == 1
@@ -126,7 +126,7 @@ const loadClaimInfo = async (n) => {
 
         card3.style.height = "150px";
         card3.style.width = "760px";
-        card3.style.transition = "height 1s, width 1s"
+        card3.style.transition = "height 1s, width 1s";
         clue_title.style.transition = "left 1s ease, opacity 0.7s ease";
         clue_title.style.left = "-100%";
         clue_title.style.opacity = "0";
@@ -258,7 +258,22 @@ const moreClaimsClickHandler = async (n, claims) => {
   console.log(n, claims.length);
   try {
     if (n < claims.length) {
-      setTimeout(() => (sec4.style.display = "none"), 500);
+      setTimeout(() => {
+        sec4.style.display = "none";
+        sec1.classList.remove("sec_1");
+        sec2.classList.remove("sec_2");
+        sec3.classList.remove("sec_3");
+        sec4.classList.remove("sec_4");
+      }, 200);
+
+      setTimeout(() => {
+        sec1.classList.add("sec_1");
+        sec2n3.style.opacity = "1"
+        sec2n3.style.display = "block"
+        sec2.classList.add("sec_2");
+        sec3.classList.add("sec_3");
+        sec4.classList.add("sec_4");
+      }, 500);
       await loadClaimInfo(n);
     } else {
       exitGame();
