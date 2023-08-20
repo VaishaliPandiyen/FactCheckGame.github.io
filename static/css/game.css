@@ -30,6 +30,18 @@ SEC 1
 
 */
 .sec_1 {
+  background-color: orange;
+  height: 400px;
+  width: 400px;
+
+  margin: 40px;
+  border-radius: 0.1rem;
+  border: 5px inset rgba(255, 166, 0, 0.3);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
   animation-duration: 2s;
   animation-fill-mode: both;
   animation-name: fadeInOut1;
@@ -56,19 +68,6 @@ SEC 1
   0% {
     opacity: 0;
   }
-}
-.card_1 {
-  background-color: orange;
-  height: 400px;
-  width: 400px;
-
-  margin: 40px;
-  border-radius: 0.1rem;
-  border: 5px inset rgba(255, 166, 0, 0.3);
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 #c_no {
   font-family: "bangers";
@@ -150,10 +149,8 @@ SEC 2
   background: #c36b00;
   margin-top: 5px;
 }
-#c_when {
-  /* background: cornsilk; */
+#c_when, #c_when a {
   color: orange;
-  /* margin-top: 5px; */
   font-weight: 500;
   text-transform: uppercase;
 }
@@ -272,6 +269,10 @@ SEC 3
   line-height: 1.5rem;
   font-size: 1.15rem;
   box-sizing: border-box;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .select {
   width: 100px;
@@ -328,16 +329,37 @@ SEC 3
 .card_3:hover {
   height: 75px;
 }
-
+.click_text {
+  left: 0;
+  opacity: 1;
+}
+.vc {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  animation-name: fadeOut31;
+  animation-delay: 0s;
+}
+@keyframes fadeOut31 {
+  0% {
+    opacity: 1;
+    left: 0;
+  }
+  70% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  100% {
+    left: -100%;
+    opacity: 0;
+    transform: scale(0);
+  }
+}
 .disappear_1 {
   transition: opacity 1s ease;
   opacity: 0;
   display: None;
 }
-.click_text {
-  left: 0;
-  opacity: 1;
-}
+
 /*
   
 CLUES CAROUSEL  
@@ -356,6 +378,10 @@ CLUES CAROUSEL
   width: 100%;
   padding: 20px;
   box-sizing: border-box;
+}
+.showClues {
+  display: flex;
+  opacity: 1;
 }
 .i_container {
   flex: 1;

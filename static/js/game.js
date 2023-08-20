@@ -36,7 +36,7 @@ let game_wrapper = document.querySelector(".game_wrapper");
 let sec1 = document.querySelector(".s1");
 let sec2 = document.querySelector(".s2");
 let sec3 = document.querySelector(".s3");
-let sec2n3 = document.querySelector(".sec_2_and_3");
+let sec2n3 = document.querySelector(".s2n3");
 let sec4 = document.querySelector(".s4");
 
 const gameLoad = async () => {
@@ -98,8 +98,8 @@ const loadClaimInfo = async (n) => {
 
       c_no.innerHTML = `Claim ${c["id"]}`;
       c_who.innerHTML = c["involves"];
-      c_what.innerHTML = c["background"];
-      c_when.innerHTML = c["claim"];
+      c_what.innerHTML = c["claim"];
+      c_when.innerHTML = c["background"];
 
       /*
 
@@ -127,16 +127,13 @@ const loadClaimInfo = async (n) => {
         card3.style.height = "150px";
         card3.style.width = "760px";
         card3.style.transition = "height 1s, width 1s";
-        clue_title.style.transition = "left 1s ease, opacity 0.7s ease";
-        clue_title.style.left = "-100%";
-        clue_title.style.opacity = "0";
+        clue_title.classList.add("vc");
 
         setTimeout(() => {
-          clues_wrapper.style.display = "flex";
+          clue_title.style.display = "none";
         }, 800);
         setTimeout(() => {
-          clue_title.style.display = "none";
-          clues_wrapper.style.opacity = "1";
+          clues_wrapper.classList.add("showClues");
         }, 1000);
       });
 
@@ -258,18 +255,31 @@ const moreClaimsClickHandler = async (n, claims) => {
   console.log(n, claims.length);
   try {
     if (n < claims.length) {
+      sec4.style.display = "none";
+      let prevClues = document.querySelectorAll(".clue");
+      for (let clue of prevClues) {
+        clue.remove();
+      }
+      emoji.removeAttribute("src");
+      verdict_title.innerHTML = "";
+      verdict_container.style.background = "none";
+      verdict_container.style.border = "none";
+      verdict_content.style.opacity = "0";
+      end_action.style.opacity = "0";
+      clue_title.classList.remove("vc");
+      clue_title.style.display = "block";
+      card3.style.height = "70px";
+      clues_wrapper.classList.remove("showClues");
       setTimeout(() => {
-        sec4.style.display = "none";
         sec1.classList.remove("sec_1");
         sec2.classList.remove("sec_2");
         sec3.classList.remove("sec_3");
         sec4.classList.remove("sec_4");
       }, 200);
-
       setTimeout(() => {
         sec1.classList.add("sec_1");
-        sec2n3.style.opacity = "1"
-        sec2n3.style.display = "block"
+        sec2n3.style.opacity = "1";
+        sec2n3.style.display = "block";
         sec2.classList.add("sec_2");
         sec3.classList.add("sec_3");
         sec4.classList.add("sec_4");
