@@ -86,6 +86,7 @@ let v = document.getElementById("v");
 let end_action = document.getElementById("end_action");
 let exit = document.getElementById("exit");
 let moreClaims = document.getElementById("more");
+let noViewClue = document.getElementById("noViewClue");
 
 const loadClaimInfo = async (n) => {
   try {
@@ -209,19 +210,29 @@ const loadClaimInfo = async (n) => {
                 verdict_info.innerHTML =
                   falseBtnRes[`${Math.max(...viewedClues)}`];
               }
-            } else {
-              // response for not viewing clues
             }
           }, 500);
         }, 3500);
       };
 
-      tick.addEventListener("click", () =>
-        showVerdict(verdict_container, bool)
-      );
-      cross.addEventListener("click", () =>
-        showVerdict(verdict_container, !bool)
-      );
+      function alertToViewClues() {
+        noViewClue.style.display = "flex";
+        setTimeout(() => (noViewClue.style.display = "none"), 5000);
+      }
+      tick.addEventListener("click", () => {
+        if (isCluesSeen == true) {
+          showVerdict(verdict_container, bool);
+        } else {
+          alertToViewClues();
+        }
+      });
+      cross.addEventListener("click", () => {
+        if (isCluesSeen == true) {
+          showVerdict(verdict_container, !bool);
+        } else {
+          alertToViewClues();
+        }
+      });
     } else {
       console.log("Claims array is empty or couldn't be fetched.");
     }

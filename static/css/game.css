@@ -170,7 +170,7 @@ SEC 3
   animation-duration: 5s;
   animation-fill-mode: both;
   animation-name: fadeInOut3;
-  animation-delay: 6s;
+  animation-delay: 7s;
 }
 @keyframes fadeInOut3 {
   0% {
@@ -187,6 +187,47 @@ SEC 3
   100% {
     opacity: 1;
   }
+}
+#mid_sec {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-family: sans-serif;
+  text-transform: uppercase;
+
+  animation-duration: 5s;
+  animation-fill-mode: both;
+  animation-name: fadeInOut22;
+  animation-delay: 2s;
+}
+@keyframes fadeInOut22 {
+  0% {
+    opacity: 0;
+    height: 0;
+    width: 0;
+  }
+  1% {
+    height: auto;
+    width: auto;
+  }
+  20%,
+  80% {
+    opacity: 0.5;
+  }
+  90% {
+    opacity: 0;
+    height: auto;
+  }
+  100% {
+    opacity: 0;
+    height: 0;
+  }
+}
+#claim_loading {
+  height: 250px;
+  width: auto;
 }
 .card_2 {
   margin: 30px;
@@ -419,4 +460,47 @@ SEC 4
 #end_action > button:hover {
   background: rgba(255, 255, 255, 0.1);
   font-weight: 600;
+}
+#noViewClue {
+  height: 100%;
+  width: 100vw;
+  position: absolute;
+  backdrop-filter: blur(5px);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  animation-duration: 3s;
+  animation-fill-mode: both;
+  animation-name: fadeInOut44;
+  animation-delay: 0s;
+}
+#noViewClue > p {
+  color: rgb(40, 40, 40);
+  height: min-content;
+  font-family: sans-serif;
+  padding: 50px 75px;
+  background: cornflowerblue;
+  border: 10px solid rgb(40, 40, 40);
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+@keyframes fadeInOut44 {
+  0% {
+    opacity: 0;
+    height: 0;
+  }
+  5%,
+  95% {
+    backdrop-filter: blur(5px);
+    opacity: 1;
+    height: 100%;
+  }
+  100% {
+    opacity: 0;
+    height: 0;
+    backdrop-filter: none;
+  }
 }
