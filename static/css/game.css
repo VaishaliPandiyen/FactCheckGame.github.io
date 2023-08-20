@@ -49,7 +49,8 @@ SEC 1
     width: 400px;
     border: 5px inset rgba(255, 166, 0, 0.3);
   }
-  0%, 70% {
+  0%,
+  70% {
     opacity: 1;
   }
 }
@@ -103,10 +104,15 @@ SEC 2
   font-size: 1.05rem;
 }
 .sec_2 {
-  /* display: flex;
-  flex-wrap: wrap; */
-  color: aliceblue;
+  background-color: rgb(30, 30, 30);
+  padding: 25px 20px 10px;
+  box-sizing: border-box;
+  color: cornsilk;
+  font-family: sans-serif;
   width: 760px;
+  font-size: 1.1rem;
+  border: 3px solid #ffffff10;
+  /* font-weight: 700; */
 
   animation-duration: 5s;
   animation-fill-mode: both;
@@ -123,9 +129,30 @@ SEC 2
     height: auto;
     width: 760px;
   }
-  20%, 100% {
+  20%,
+  100% {
     opacity: 1;
   }
+}
+.sec_2 p {
+  display: inline-block;
+}
+#c_who,
+#c_when {
+  padding: 5px;
+  border-radius: 1px;
+  line-height: 1.5rem;
+}
+#c_who {
+  background: #c36b00;
+  margin-top: 5px;
+}
+#c_when {
+  /* background: cornsilk; */
+  color: orange;
+  /* margin-top: 5px; */
+  font-weight: 500;
+  text-transform: uppercase;
 }
 /* 
 
@@ -143,7 +170,7 @@ SEC 3
   animation-duration: 5s;
   animation-fill-mode: both;
   animation-name: fadeInOut3;
-  animation-delay: 3s;
+  animation-delay: 6s;
 }
 @keyframes fadeInOut3 {
   0% {
@@ -156,16 +183,19 @@ SEC 3
     height: auto;
     width: auto;
   }
-  20%, 100% {
+  70%,
+  100% {
     opacity: 1;
   }
+}
+.card_2 {
+  margin: 30px;
 }
 .card_2,
 .card_3 {
   height: 150px;
   width: 760px;
   background: rgb(252, 178, 41);
-  margin: 30px;
   box-sizing: border-box;
 
   display: flex;
@@ -176,9 +206,10 @@ SEC 3
 .c {
   height: 100%;
   width: 150px;
-  background: orange;
-  color: rgb(0, 0, 0, 0.8);
-  font-size: 2.5rem;
+  background: rgb(30, 30, 30);
+  color: orange;
+  /* border: 15px solid #562f01; */
+  font-size: 2.1rem;
   font-family: sans-serif;
   text-transform: uppercase;
   font-weight: 700;
@@ -190,10 +221,12 @@ SEC 3
 }
 .claim {
   width: 500px;
+  height: inherit;
   font-family: sans-serif;
   text-align: center;
-  padding: 50px;
+  padding: 40px;
   line-height: 1.5rem;
+  font-size: 1.15rem;
   box-sizing: border-box;
 }
 .select {
@@ -228,17 +261,18 @@ SEC 3
 .card_3 {
   width: 760px;
   text-align: center;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   font-weight: 700;
 
   display: flex;
   justify-content: center;
   align-items: center;
+  border: 2px inset #c36b00;
 
   position: relative;
   font-family: sans-serif;
-  height: 50px;
-  transition: height 1s, width 1s;
+  height: 70px;
+  text-transform: uppercase;
 }
 .card_3:hover {
   background: linear-gradient(to right, orange, rgb(252, 178, 41));
@@ -246,6 +280,9 @@ SEC 3
 }
 .card_3:hover .click_text {
   transform: scale(1.05);
+}
+.card_3:hover {
+  height: 75px;
 }
 
 .disappear_1 {
@@ -259,9 +296,7 @@ SEC 3
 }
 /*
   
-
 CLUES CAROUSEL  
-
 
 */
 .clues {
@@ -317,9 +352,7 @@ CLUES CAROUSEL
 
 /* 
 
-
 SEC 4
-
 
 */
 .sec_4 {

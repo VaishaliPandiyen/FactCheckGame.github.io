@@ -32,7 +32,7 @@ ON GAME LOAD
 
 */
 
-let game_wrapper = document.querySelector(".game_wrapper")
+let game_wrapper = document.querySelector(".game_wrapper");
 let sec1 = document.querySelector(".sec_1");
 let sec2 = document.querySelector(".sec_2");
 let sec3 = document.querySelector(".sec_3");
@@ -40,39 +40,9 @@ let sec2n3 = document.querySelector(".sec_2_and_3");
 let sec4 = document.querySelector(".sec_4");
 
 const gameLoad = async () => {
-  // sec1.style.opacity = "1";
-  sec2.style.opacity == 1 ? game_wrapper.style.justifyContent = "flex-start" : game_wrapper.style.alignItems = "center" 
-
-  // setTimeout(() => {
-  //   sec1.style.opacity = "0";
-  //   setTimeout(() => {
-  //     sec1.style.display = "None";
-  //   }, 500);
-  // }, 1500);
-  // setTimeout(() => {
-  //   sec2.style.display = "Flex";
-  //   setTimeout(() => (sec2.style.opacity = "1"), 500);
-  // }, 2000);
-  // setTimeout(() => {
-  //   sec2n3.style.top = "25.5%";
-    // sec3.style.display = "Flex";
-  //   sec3.style.transform = "scale(0.8)";
-  //   setTimeout(() => (sec3.style.opacity = "0.5"), 500);
-  //   sec2.addEventListener("mouseenter", () => {
-  //     sec2n3.style.top = "25.5%";
-  //     sec3.style.transform = "scale(0.8)";
-  //     sec2.style.transform = "scale(1)";
-  //     sec3.style.opacity = "0.5";
-  //     sec2.style.opacity = "1";
-  //   });
-  //   sec3.addEventListener("mouseenter", () => {
-  //     sec2n3.style.top = "-18%";
-  //     sec3.style.transform = "scale(1)";
-  //     sec2.style.transform = "scale(0.8)";
-  //     sec2.style.opacity = "0.5";
-      // sec3.style.opacity = "1";
-  //   });
-  // }, 5000);
+  sec2.style.opacity == 1
+    ? (game_wrapper.style.justifyContent = "flex-start")
+    : (game_wrapper.style.alignItems = "center");
 };
 
 /* ----------------------------------------------------- */
