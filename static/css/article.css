@@ -1,5 +1,5 @@
 #article_body {
-    background: orange;
+  background: orange;
   background: rgb(255, 182, 47);
   height: 100vh;
   margin: 0;
@@ -74,16 +74,16 @@
   display: flex;
 }
 #a_headline {
-    text-align: center;
-    width: 100%;
-    font-size: 3rem;
+  text-align: center;
+  width: 100%;
+  font-size: 3rem;
 }
 .a_s1,
 .a_s2 {
   height: inherit;
-  padding: 20px;
+  padding: 30px;
   box-sizing: border-box;
-  
+
   display: flex;
 }
 .a_s1 {

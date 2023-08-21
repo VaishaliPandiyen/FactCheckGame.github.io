@@ -23,6 +23,17 @@
 #w_mid {
   width: 50vw;
   background-color: rgba(47, 79, 79, 0.2);
+  padding: 10vh 10vw;
+  box-sizing: border-box;
+}
+
+#w_mid p {
+  font-size: 2rem;
+  font-style: oblique;
+  margin: 30px 0;
+  text-align: center;
+  /* font-family: Georgia, 'Times New Roman', Times, serif; */
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 #w_logo {
   height: 30vh;
@@ -93,7 +104,8 @@
   color: darkslategray;
   border: 15px outset #00000020;
 }
-#read:hover, #play:hover {
+#read:hover,
+#play:hover {
   background: whitesmoke;
   transform: scale(1.03);
 }
