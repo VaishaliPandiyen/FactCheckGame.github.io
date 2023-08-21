@@ -1,30 +1,104 @@
-
-.welcome_body {
+#welcome_body {
+  background: whitesmoke;
   height: 100vh;
-  background: url("../../img/8715883.gif");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+}
+#welcome_main {
+  height: calc(100vh - 80px);
 
   display: flex;
   justify-content: center;
-  align-items: flex-end;
+  align-items: center;
 }
-#title {
+#w_light,
+#w_mid,
+#w_dark {
+  width: 25vw;
+  height: inherit;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#w_mid {
+  width: 50vw;
+  background-color: rgba(47, 79, 79, 0.2);
+}
+#w_logo {
+  height: 30vh;
+}
+#w_logo:hover {
+  animation: wl_rotate 3s infinite linear;
+  cursor: none;
+}
+@keyframes wl_rotate {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
+}
+#w_dark {
+  background-color: rgba(47, 79, 79, 0.4);
+}
+#welcome_footer {
+  position: absolute;
+  top: calc(100vh - 80px);
+
+  height: 80px;
+  width: 100vw;
+  background: #00000005;
   font-family: sans-serif;
-  text-align: center;
-  margin-top: auto;
-  /* position: fixed;
-  bottom: 0; */
-  color: lightgoldenrodyellow;
-  letter-spacing: 0.1rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#social {
+  padding: 15px;
+  font-weight: 700;
+  width: 100vw;
+  background: #00000005;
+
+  display: flex;
+  justify-content: center;
+}
+#social a {
+  text-decoration: none;
+  color: darkslategray;
+  opacity: 0.5;
+  margin: 0 20px;
+}
+#vpmd {
+  color: darkslategray;
   opacity: 0.3;
   padding: 10px;
+  letter-spacing: 0.1rem;
+  font-size: smaller;
 }
-#title > a {
-  color: lightgoldenrodyellow;
+#read,
+#play {
+  width: 200px;
+  height: 100px;
+  background: whitesmoke;
+  cursor: pointer;
+}
+#read {
+  font-family: sans-serif;
   text-decoration: none;
-  background: rgba(255, 255, 255, 0.2);
-  padding: 3px;
-  border-radius: 0.3rem;
+  font-size: 2rem;
+  font-weight: 700;
+  color: darkslategray;
+  border: 15px outset #00000020;
+}
+#read:hover, #play:hover {
+  background: whitesmoke;
+  transform: scale(1.03);
+}
+#play {
+  font-size: 3rem;
+  border: 15px outset rgb(204, 113, 3);
+  margin-top: 30px;
 }
