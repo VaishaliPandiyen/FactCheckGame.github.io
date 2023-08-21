@@ -68,31 +68,20 @@
   justify-content: flex-start;
   align-items: center;
 }
-.a_sections {
-  width: inherit;
-
-  display: flex;
+#a_game_1 p, #a_game_1 h1 {
+text-align: center;
+max-width: 50vw;
 }
-#a_headline {
+.a_moreGameinfo {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 5vw;
+  margin: 5vh 5vw;
+}
+.a_moreGameinfo > div {
+  width: 25vw;
   text-align: center;
-  width: 100%;
-  font-size: 3rem;
-}
-.a_s1,
-.a_s2 {
-  height: inherit;
-  padding: 30px;
-  box-sizing: border-box;
-
-  display: flex;
-}
-.a_s1 {
-  width: 60%;
-}
-.a_s2 {
-  width: 40%;
-  background: darkorange;
-  background: orange;
 }
 #a_foot {
   height: 30px;
