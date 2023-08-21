@@ -26,7 +26,7 @@
             <p id="ash_info"></p>
         </div>
     </section>
-    <div id="a_main" class="">
+    <div class="a_main">
         <div id="a_game_1" class="">
             <h1>TBD: TO BE DECIDED</h1>
             <p>A social media post’s (real one, not a parody or satire) main “fact” will be surrounded by additional
@@ -42,12 +42,14 @@
 
             <p> When we’re so immersed in consuming content, critical thinking often takes a
                 back seat. You’ll be surprised how easy it is to assume X means Y!</p>
-            <hr style="border: 1px solid #00000030;
-                max-width: 30vw;">
-            <p>Click <span
-                    style="padding: 3px 5px; background: darkorange; border-radius: 2px; cursor: pointer; font-weight: 700;"
-                    onclick="showArticle()">here</span>
-                to read why!</p>
+            <div class="exp_a">
+                <hr style="border: 1px solid #00000030;
+                        max-width: 30vw;">
+                <p>Click <span
+                        style="padding: 3px 5px; background: darkorange; border-radius: 2px; cursor: pointer; font-weight: 700;"
+                        onclick="showArticle()">here</span>
+                    to read why!</p>
+            </div>
         </div>
         <div class="a_moreGameinfo">
             <div id="a_game_2">
@@ -73,12 +75,48 @@
                 <p>We have tried making it simple, engaging and inclusive, for players from
                     all backgrounds to enjoy.
                 </p>
-                <p>Kindly <a style="color: brown;" href="mailto:vaishali.pandima@gmail.com">write to me</a> if you have any queries,
+                <p>Kindly <a style="color: brown;" href="mailto:vaishali.pandima@gmail.com">write to me</a> if you have
+                    any queries,
                     complaints, suggestions or
                     feedback!</p>
             </div>
         </div>
-        <div id="a_content"></div>
+        <div id="a_article" class="ac_hidden">
+            <img onclick="hideArticle()" src="../img/cross.png" alt=""
+                style="height: 15px; width: 15px; padding: 3px; border-radius: 3px; background: black; cursor: pointer; border: 1px solid #00000050;">
+            <h2 style="text-transform: uppercase; font-weight: 400;">Catchy headline placeholder</h2>
+            <!-- <p>Subhead: Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel assumenda, pariatur, delectus eos
+                voluptas explicabo natus nam ipsam expedita nemo cumque ipsa incidunt dolore nisi magnam iste neque!
+                Ipsum, dicta?</p> -->
+            <i style="font-size: smaller;">August, 2023</i>
+            <img src="../img/braydon-anderson-wOHH-NUTvVc-unsplash.jpg"
+                style="padding: 20px 10px; height: 200px; object-fit: cover; box-sizing: border-box;"
+                alt="braydon-anderson-wOHH-NUTvVc-unsplash">
+            <div class="article_controls">
+                <p id="full" class="" onclick="viewFull()">Full version</p>
+                <p id="tldr" class="" onclick="viewTldr()">TLDR</p>
+            </div>
+            <div id="article_tldr" class="ac_hidden">Coming soon...</div>
+            <div id="article_full" class="ac_hidden">
+                <h2 style="font-weight: 400; font-size: 22px;">Why do we keep falling for misinformation and just keep going on without even realizing it?</h2>
+                <p>Most of us, especially youngsters, constantly keep scrolling or changing tabs when we read/watch
+                    something. How often do we comfortably read long articles till the end? Do we even reflect on what
+                    we saw someone comment on social media?</p>
+                <h3>Misinformation in plain sight</h3>
+                <p>It's the age of social media, and we don't know (and can't even count) the extent of misinformation
+                    being shared, both unintentionally and intentionally. However, we've heard time and again that
+                    social media amplifies misinformation.</p>
+                <p>Why? Social media runs on user engagement, which means sharing content that "engages others and
+                    attracts social recognition." As we scroll through vast amounts of information on digital media
+                    platforms, we tend to skim content without having enough time to verify its accuracy and
+                    authenticity.</p>
+                <h3>Social media and critical thinking</h3>
+                <p></p>
+                <h3>Gamifying media literacy</h3>
+                <p></p>
+
+            </div>
+        </div>
     </div>
     <footer id="a_foot">
         <a href="">Read project report here</a>
@@ -87,26 +125,7 @@
         <img style="position: fixed; top: 90vh; left: 20px; height: 30px; cursor: pointer; padding: 10px; background: #00000015;"
             src="../img/arrowhead-up.png" />
     </a>
-    <script>
-        let sideInfo = document.querySelector(".as_hidden")
-        let ash_title = document.getElementById("ash_title")
-        let ash_info = document.getElementById("ash_info")
-        function showWho() {
-            sideInfo.classList.add("as_visible")
-            ash_title.innerText = "Who is behind TBD"
-            ash_info.innerHTML = ""
-        }
-        function showCd() {
-            sideInfo.classList.add("as_visible")
-            ash_title.innerText = "Copyrights and data"
-            ash_info.innerHTML = ""
-        }
-        function hideSide() {
-            sideInfo.classList.remove("as_visible")
-        }
-        function showArticle() {
-
-        }
+    <script src="../static/js/about.js">
     </script>
 </body>
 
