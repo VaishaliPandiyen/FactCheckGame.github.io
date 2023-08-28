@@ -21,14 +21,14 @@
             "title": "Politifact"
           }
         },
-        "trueBtn": {
+        "true": {
           "0": "Being a dog lover doesn't mean there were 200 dogs at the birthday party!<br><br> It's essential to check for more evidence to confirm the claim's accuracy.",
           "1": "Nice outfits, but the clue didn’t tell us about the birthday party or if there were 200 dogs!",
           "2": "The reel and tweet said he had 200 dogs for his birthday. BUT the number of likes and shares on a reel does not necessarily indicate whether the information in the reel is true! <br><br> Tip: Keep investigating till you get more reliable information.",
           "3": "A neighbourhood app post by his family sounds credible but only tells us that they invited dog owners for a pet parade!",
           "4": "The article mentions that more than 200 dogs showed up for the birthday celebration! Based on this evidence from The Washington Post, the claim that over 200 dogs attended the party is considered 'Good enough to be true.'"
         },
-        "falseBtn": {
+        "false": {
           "0": "The clue didn’t tell us about the birthday party nor if there were 200 dogs to verify the claim!",
           "1": "Nice outfits, but the clue didn’t tell us about the birthday party or if there were 200 dogs!",
           "2": "Although the number of likes and shares on a reel does not necessarily indicate whether the information in the reel is true, the reel and tweet said he had 200 dogs for his birthday! <br><br> Tip: Keep investigating till you get more reliable information.",
@@ -57,17 +57,17 @@
             "title": "Politifact"
           }
         },
-        "trueBtn": {
-          "0": "Many of the video clips are old or from different places, inside and outside of France. <br><br> The Paris Zoological Park also <a href=\"https://twitter.com/zoodeparis/status/1675819364342169601\">resonded</a> on Twitter, reassuring that all the animals are safe.",
-          "1": "Since Twitter stopped user verification after Elon Musk's purchase in October 2022, the presence of a ‘verified’ check mark on an account no longer guarantees the credibility of the content.",
-          "2": "Video quality and recorded device doesn’t provide evidence either supporting or refuting the claim. <br><br> Look for more relevant information!",
-          "3": "The mentioned “lot of fakes during these riots” does not talk about released zoo animals!"
-        },
-        "falseBtn": {
+        "true": {
           "0": "Many of the video clips are old or from different places, inside and outside of France. <br><br> The Paris Zoological Park also <a href=\"https://twitter.com/zoodeparis/status/1675819364342169601\">resonded</a> on Twitter, reassuring that all the animals are safe.",
           "1": "The Paris Zoological Park also <a href=\"https://twitter.com/zoodeparis/status/1675819364342169601\">resonded</a> on Twitter, reassuring that all the animals are safe.<br><br>  Many of the video clips are old or from different places, inside and outside of France. <br><br> Since Twitter stopped user verification after Elon Musk's purchase in October 2022, the presence of a ‘verified’ check mark on an account no longer guarantees the credibility of the content.",
           "2": "The Paris Zoological Park also <a href=\"https://twitter.com/zoodeparis/status/1675819364342169601\">resonded</a> on Twitter, reassuring that all the animals are safe.<br><br>  Many of the video clips are old or from different places, inside and outside of France. <br><br> Since Twitter stopped user verification after Elon Musk's purchase in October 2022, the presence of a ‘verified’ check mark on an account no longer guarantees the credibility of the content.",
           "3": "Although video quality, recorded devices and other fake videos don’t support or refute the claim, many “animal release” videos are old or from different places, inside and outside of France. <br><br> The Paris Zoological Park also <a href=\"https://twitter.com/zoodeparis/status/1675819364342169601\">resonded</a> on Twitter, reassuring that all the animals are safe."
+        },
+        "false": {
+          "0": "Many of the video clips are old or from different places, inside and outside of France. <br><br> The Paris Zoological Park also <a href=\"https://twitter.com/zoodeparis/status/1675819364342169601\">resonded</a> on Twitter, reassuring that all the animals are safe.",
+          "1": "Since Twitter stopped user verification after Elon Musk's purchase in October 2022, the presence of a ‘verified’ check mark on an account no longer guarantees the credibility of the content.",
+          "2": "Video quality and recorded device doesn’t provide evidence either supporting or refuting the claim. <br><br> Look for more relevant information!",
+          "3": "The mentioned “lot of fakes during these riots” does not talk about released zoo animals!"
         }
       }
     },
@@ -75,36 +75,36 @@
       "id": "03",
       "involves": "Davyon Johnson, a sixth grader from Muskogee, Oklahoma",
       "background": "",
-      "claim": "",
+      "claim": "A 11-year-old boy saved the lives of 2 people on the same day.",
       "clues": {
-        "0": "Robert Moore is a dog lover.",
-        "1": "The dogs wore their birthday best — <br> tuxedos\nand mini cowboy hats — and came with cards, flowers, cupcakes \nand,\nof\n\n  course, doggy kisses.",
-        "2": "A Facebook <a href=\"https://www.facebook.com/reel/220703114242927\" onclick=\"g1c2a1()\">reel</a> with photos and videos of Moore’s big day \n got over 440,000 likes and 90,000 shares",
-        "3": "His family posted on the neighbourhood app <a href=\"https://nextdoor.com/p/c5QS5RD7rdhj\">Nextdoor</a> and Facebook, \n asking dog owners to stop by with their canines for a pet parade.",
-        "4": "Moore’s daughter Alison Moore, <a href=\"https://www.washingtonpost.com/lifestyle/2023/06/23/dog-pet-parade-100-birthday/\">told The Washington Post</a> that her father has loved dogs all his life and wants to pet each one he sees."
+        "0": "The Enid News & Eagle, a northwest Oklahoma newspaper, reported that Davyon put to use what he had learned from a YouTube video.",
+        "1": "An Instagram <a href='https://ghostarchive.org/iarchive/instagram/boitoi.fun/3088060954977328611'>post</a> in April 2023 said that “He saw a friend choking at school and performed the Heimlich maneuver. Then on his way home, he saw a house fire and pulled a woman to safety.” ",
+        "2": "Davyon told his story <a href='https://www.youtube.com/watch?v=otpM5islMIE'>in a 2023 video</a> for the American Red Cross — said he was in his life skills class at the time of the incident. ",
+        "3": "",
+        "4": ""
       },
       "responses": {
         "verdict": {
           "boolean": true,
           "v": "Good Enough To Be True",
           "source": {
-            "link": "https://www.politifact.com/factchecks/2023/jul/06/facebook-posts/good-enough-to-be-true-mans-100th-birthday-dog-par/",
+            "link": "",
             "title": "Politifact"
           }
         },
-        "trueBtn": {
-          "0": "How did you know 200 dogs showed up just because he’s a dog lover?",
-          "1": "BUT that didn’t say anything about 200 dogs!",
-          "2": "The reel said he had 200 dogs for his birthday. BUT the number of likes and shares on a reel does not necessarily indicate whether the information in the reel is true!",
-          "3": "A neighborhood app post by his family does sound credible. However…",
-          "4": "Now it is good enough to be true!"
+        "true": {
+          "0": "BUT what did he learn and use, and for what? The fact that he learned something from a YouTube video doesn't prove the claim!",
+          "1": "The post talks about the two separate instances where Davyon intervened to save lives. The fact it includes both scenarios provides supporting evidence for the claim that he saved two lives on the same day. ",
+          "2": "",
+          "3": "",
+          "4": ""
         },
-        "falseBtn": {
-          "0": "1",
-          "1": "2",
-          "2": "3",
-          "3": "4",
-          "4": "5"
+        "false": {
+          "0": "This clue did not give any information that specifically contradicts the claim about him saving two lives in one day!",
+          "1": "The fact that the post includes both scenarios provides supporting evidence for the claim that he saved two lives on the same day. The absence of additional sources and evidence doesn't automatically make the claim false.",
+          "2": "",
+          "3": "",
+          "4": ""
         }
       }
     }

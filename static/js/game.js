@@ -20,7 +20,6 @@ const getClaimsArray = async () => {
     let claimsObject = await fetchClaims();
     let claimsArray = claimsObject.claims;
     return claimsArray;
-    // console.log(claims);
   } catch (error) {
     return "Error:", error;
   }
@@ -69,9 +68,6 @@ let clue_title = document.querySelector(".click_text");
 let clues_wrapper = document.querySelector(".clues");
 let showPrev = document.getElementById("showPrev");
 let showNext = document.getElementById("showNext");
-let card3_click1_basics = () => {
-  clue_title.opacity = "0";
-};
 
 let tick = document.getElementById("tick");
 let cross = document.getElementById("cross");
@@ -87,6 +83,67 @@ let end_action = document.getElementById("end_action");
 let exit = document.getElementById("exit");
 let moreClaims = document.getElementById("more");
 let noViewClue = document.getElementById("noViewClue");
+
+let responses;
+let verdict;
+let trueRes;
+let falseRes;
+let bool;
+
+let isCluesSeen = false;
+
+let card3_click1_basics = () => {
+  clue_title.opacity = "0";
+};
+
+card3.addEventListener("click", () => {
+  isCluesSeen = true;
+  card3_click1_basics();
+
+  card3.style.height = "150px";
+  card3.style.width = "760px";
+  card3.style.transition = "height 1s, width 1s";
+  clue_title.classList.add("vc");
+
+  setTimeout(() => {
+    clue_title.style.display = "none";
+  }, 800);
+  setTimeout(() => {
+    clues_wrapper.classList.add("showClues");
+  }, 1000);
+});
+
+let viewedClues = [0];
+
+const showVerdict = (v_c, v) => {
+  sec2n3.style.opacity = "0";
+  emoji.setAttribute("src", v ? "../img/sunglass.png" : "../img/what.png");
+  verdict_title.innerHTML = v ? "That's right" : "You missed that!";
+
+  setTimeout(() => {
+    sec2n3.style.display = "none";
+    sec4.style.display = "flex";
+    setTimeout(() => (emoji.style.transform = "scale(0.5)"), 100);
+  }, 1000);
+  setTimeout(() => (emoji.style.transform = "scale(0.2)"), 2000);
+
+  setTimeout(() => {
+    const { style } = v_c;
+    style.background = v ? "yellowgreen" : "orangered";
+    style.border = v ? "3px solid green" : "5px solid red";
+    verdict_content.style.opacity = "1";
+    end_action.style.opacity = "1";
+    setTimeout(() => {
+      if (isCluesSeen == true) {
+        if (v_c.style.background == "yellowgreen") {
+          verdict_info.innerHTML = trueRes[`${Math.max(...viewedClues)}`];
+        } else {
+          verdict_info.innerHTML = falseRes[`${Math.max(...viewedClues)}`];
+        }
+      }
+    }, 500);
+  }, 3500);
+};
 
 const loadClaimInfo = async (n) => {
   try {
@@ -116,26 +173,7 @@ const loadClaimInfo = async (n) => {
       }
       clueWrapper.querySelectorAll(".clue")[0].classList.add("active");
       let clue = document.querySelectorAll(".clue");
-      let isCluesSeen = false;
       let currentIndex = 0;
-      const viewedClues = [0];
-
-      card3.addEventListener("click", () => {
-        isCluesSeen = true;
-        card3_click1_basics();
-
-        card3.style.height = "150px";
-        card3.style.width = "760px";
-        card3.style.transition = "height 1s, width 1s";
-        clue_title.classList.add("vc");
-
-        setTimeout(() => {
-          clue_title.style.display = "none";
-        }, 800);
-        setTimeout(() => {
-          clues_wrapper.classList.add("showClues");
-        }, 1000);
-      });
 
       const showClue = (index) => {
         clue.forEach((c, i) => {
@@ -169,68 +207,16 @@ const loadClaimInfo = async (n) => {
 
       */
 
-      let responses = c["responses"];
-      let verdict = responses["verdict"];
-      let trueBtnRes = responses["trueBtn"];
-      let falseBtnRes = responses["falseBtn"];
-      let bool = verdict["boolean"];
+      responses = c["responses"];
+      verdict = responses["verdict"];
+      trueRes = responses["true"];
+      falseRes = responses["false"];
+      bool = verdict["boolean"];
+
       v.innerHTML = `"${verdict["v"]}"`;
       v_srcLink.setAttribute("href", verdict["source"]["link"]);
       v_srcTitle.innerHTML = verdict["source"]["title"];
 
-      const showVerdict = (verdict_container, v) => {
-        sec2n3.style.opacity = "0";
-        emoji.setAttribute(
-          "src",
-          v ? "../img/sunglass.png" : "../img/what.png"
-        );
-        verdict_title.innerHTML = v ? "That's right" : "You missed that!";
-
-        setTimeout(() => {
-          sec2n3.style.display = "none";
-          sec4.style.display = "flex";
-          setTimeout(() => (emoji.style.transform = "scale(0.5)"), 100);
-        }, 1000);
-        setTimeout(() => (emoji.style.transform = "scale(0.2)"), 2000);
-
-        setTimeout(() => {
-          const { style } = verdict_container;
-          style.background = v ? "yellowgreen" : "orangered";
-          style.border = v ? "3px solid green" : "5px solid red";
-          verdict_content.style.opacity = "1";
-          end_action.style.opacity = "1";
-          setTimeout(() => {
-            if (isCluesSeen == true) {
-              if (verdict_container.style.background == "yellowgreen") {
-                verdict_info.innerHTML =
-                  trueBtnRes[`${Math.max(...viewedClues)}`];
-              } else {
-                verdict_info.innerHTML =
-                  falseBtnRes[`${Math.max(...viewedClues)}`];
-              }
-            }
-          }, 500);
-        }, 3500);
-      };
-
-      function alertToViewClues() {
-        noViewClue.style.display = "flex";
-        setTimeout(() => (noViewClue.style.display = "none"), 5000);
-      }
-      tick.addEventListener("click", () => {
-        if (isCluesSeen == true) {
-          showVerdict(verdict_container, bool);
-        } else {
-          alertToViewClues();
-        }
-      });
-      cross.addEventListener("click", () => {
-        if (isCluesSeen == true) {
-          showVerdict(verdict_container, !bool);
-        } else {
-          alertToViewClues();
-        }
-      });
     } else {
       console.log("Claims array is empty or couldn't be fetched.");
     }
@@ -238,7 +224,24 @@ const loadClaimInfo = async (n) => {
     console.error("Error:", error);
   }
 };
-
+function alertToViewClues() {
+  noViewClue.style.display = "flex";
+  setTimeout(() => (noViewClue.style.display = "none"), 5000);
+}
+tick.addEventListener("click", () => {
+  if (isCluesSeen == true) {
+    showVerdict(verdict_container, bool);
+  } else {
+    alertToViewClues();
+  }
+});
+cross.addEventListener("click", () => {
+  if (isCluesSeen == true) {
+    showVerdict(verdict_container, !bool);
+  } else {
+    alertToViewClues();
+  }
+});
 loadClaimInfo(n);
 
 /*
@@ -252,9 +255,9 @@ const exitGame = () =>
 
 const moreClaimsClickHandler = async (claims) => {
   n++;
-  console.log(n, claims.length);
+  isCluesSeen = false;
   try {
-    if (n < claims.length) {
+    if (claims && n < claims.length) {
       sec4.style.display = "none";
       let prevClues = document.querySelectorAll(".clue");
       for (let clue of prevClues) {
@@ -270,6 +273,7 @@ const moreClaimsClickHandler = async (claims) => {
       clue_title.style.display = "block";
       card3.style.height = "70px";
       clues_wrapper.classList.remove("showClues");
+      viewedClues = [0]
       setTimeout(() => {
         sec1.classList.remove("sec_1");
         sec2.classList.remove("sec_2");

@@ -1,0 +1,37 @@
+{
+    "id": "",
+    "involves": "",
+    "background": "",
+    "claim": "",
+    "clues": {
+      "0": "",
+      "1": "",
+      "2": "",
+      "3": "",
+      "4": ""
+    },
+    "responses": {
+      "verdict": {
+        "boolean": true,
+        "v": "Good Enough To Be True",
+        "source": {
+          "link": "",
+          "title": "Politifact"
+        }
+      },
+      "true": {
+        "0": "",
+        "1": "",
+        "2": "",
+        "3": "",
+        "4": ""
+      },
+      "false": {
+        "0": "",
+        "1": "",
+        "2": "",
+        "3": "",
+        "4": ""
+      }
+    }
+  }
