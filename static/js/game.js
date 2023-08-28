@@ -124,8 +124,8 @@ const showVerdict = (v_c, v) => {
     sec2n3.style.display = "none";
     sec4.style.display = "flex";
     setTimeout(() => (emoji.style.transform = "scale(0.5)"), 100);
-  }, 1000);
-  setTimeout(() => (emoji.style.transform = "scale(0.2)"), 2000);
+  }, 500);
+  setTimeout(() => (emoji.style.transform = "scale(0.2)"), 1000);
 
   setTimeout(() => {
     const { style } = v_c;
@@ -133,7 +133,6 @@ const showVerdict = (v_c, v) => {
     style.border = v ? "3px solid green" : "5px solid red";
     verdict_content.style.opacity = "1";
     end_action.style.opacity = "1";
-    setTimeout(() => {
       if (isCluesSeen == true) {
         if (v_c.style.background == "yellowgreen") {
           verdict_info.innerHTML = trueRes[`${Math.max(...viewedClues)}`];
@@ -141,8 +140,7 @@ const showVerdict = (v_c, v) => {
           verdict_info.innerHTML = falseRes[`${Math.max(...viewedClues)}`];
         }
       }
-    }, 500);
-  }, 3500);
+  }, 1500);
 };
 
 const loadClaimInfo = async (n) => {

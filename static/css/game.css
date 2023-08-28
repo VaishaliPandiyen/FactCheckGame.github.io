@@ -116,7 +116,7 @@ SEC 2
   border: 3px solid #ffffff10;
   /* font-weight: 700; */
 
-  animation-duration: 5s;
+  animation-duration: 3s;
   animation-fill-mode: both;
   animation-name: fadeInOut2;
   animation-delay: 2s;
@@ -167,10 +167,10 @@ SEC 3
   justify-content: center;
   align-items: center;
 
-  animation-duration: 5s;
+  animation-duration: 3s;
   animation-fill-mode: both;
   animation-name: fadeInOut3;
-  animation-delay: 7s;
+  animation-delay: 6s;
 }
 @keyframes fadeInOut3 {
   0% {
@@ -178,7 +178,7 @@ SEC 3
     height: 0;
     width: 0;
   }
-  10% {
+  1% {
     opacity: 0;
     height: auto;
     width: auto;
@@ -197,7 +197,7 @@ SEC 3
   font-family: sans-serif;
   text-transform: uppercase;
 
-  animation-duration: 5s;
+  animation-duration: 4s;
   animation-fill-mode: both;
   animation-name: fadeInOut22;
   animation-delay: 2s;
@@ -371,7 +371,7 @@ CLUES CAROUSEL
   align-items: center;
 
   opacity: 0;
-  transition: opacity 1.3s ease;
+  transition: opacity 0.7s ease;
   z-index: 1;
 
   cursor: default;
@@ -432,7 +432,7 @@ SEC 4
 }
 #emoji {
   transform: scale(0);
-  transition: transform 2s;
+  transition: transform 1s;
 
   position: relative;
   top: -250px;
@@ -459,7 +459,7 @@ SEC 4
   align-items: flex-start;
 
   opacity: 0;
-  transition: opacity 1.5s ease;
+  transition: opacity 1.3s ease;
 }
 #verdict_title {
   font-size: 2.5rem;
