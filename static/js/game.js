@@ -248,9 +248,9 @@ MORE & EXIT
 */
 
 const exitGame = () =>
-  setTimeout(() => (window.location.href = "play.html"), 1000);
+  setTimeout(() => (window.location.href = "../index.html"), 1000);
 
-const moreClaimsClickHandler = async (n, claims) => {
+const moreClaimsClickHandler = async (claims) => {
   n++;
   console.log(n, claims.length);
   try {
@@ -296,4 +296,4 @@ const moreClaimsClickHandler = async (n, claims) => {
 
 exit.addEventListener("click", () => exitGame());
 
-moreClaims.addEventListener("click", () => moreClaimsClickHandler(n, claims));
+moreClaims.addEventListener("click", () => moreClaimsClickHandler(claims));
