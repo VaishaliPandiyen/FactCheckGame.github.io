@@ -74,14 +74,14 @@
     {
       "id": "03",
       "involves": "Davyon Johnson, a sixth grader from Muskogee, Oklahoma",
-      "background": "",
+      "background": "From having a normal school day, he went on to be named an honorary police officer.",
       "claim": "A 11-year-old boy saved the lives of 2 people on the same day.",
       "clues": {
         "0": "The Enid News & Eagle, a northwest Oklahoma newspaper, reported that Davyon put to use what he had learned from a YouTube video.",
         "1": "An Instagram <a href='https://ghostarchive.org/iarchive/instagram/boitoi.fun/3088060954977328611'>post</a> in April 2023 said that “He saw a friend choking at school and performed the Heimlich maneuver. Then on his way home, he saw a house fire and pulled a woman to safety.” ",
         "2": "Davyon told his story <a href='https://www.youtube.com/watch?v=otpM5islMIE'>in a 2023 video</a> for the American Red Cross — said he was in his life skills class at the time of the incident. ",
-        "3": "",
-        "4": ""
+        "3": "His story attracted <a href='https://www.cnn.com/2021/12/22/us/student-saves-two-people-davyon-johnson-trnd/index.html'>national media</a> attention.",
+        "4": "The New York Times <a href='https://www.nytimes.com/2021/12/26/us/davyon-johnson-student-saves-classmate-fire.html'>reported</a> that his mother stopped and called the police while Davyon went to knock on the door to warn the people inside. "
       },
       "responses": {
         "verdict": {
@@ -96,15 +96,80 @@
           "0": "BUT what did he learn and use, and for what? The fact that he learned something from a YouTube video doesn't prove the claim!",
           "1": "The post talks about the two separate instances where Davyon intervened to save lives. The fact it includes both scenarios provides supporting evidence for the claim that he saved two lives on the same day.",
           "2": "Muskogee Public Schools <a href='https://www.facebook.com/MuskogeeSchools/posts/10158469164212963'>recognized</a> his actions during a school board meeting and gave him the heroism award.<br><br>He also received honorary membership in the local police and sheriff’s departments.",
-          "3": "",
-          "4": ""
+          "3": "In 2021, news outlets like <a href='https://www.cnn.com/2021/12/22/us/student-saves-two-people-davyon-johnson-trnd/index.html'>CNN</a>, <a href='https://www.nytimes.com/2021/12/26/us/davyon-johnson-student-saves-classmate-fire.html'>The New York Times</a> and <a href='https://www.enidnews.com/news/state/muskogee-student-honored-for-saving-2-lives/article_6b221e58-5fae-11ec-b7eb-fba8002a9aa8.html'>Enid News & Eagle</a> reported that the then-sixth grader from Muskogee, Oklahoma, saved the lives of two people in one day.",
+          "4": "Yes, an older woman using a walker had trouble moving quickly enough, so Davyon helped her get away from the house and move toward her truck."
         },
         "false": {
           "0": "This clue did not give any information that specifically contradicts the claim about him saving two lives in one day!",
           "1": "The fact that the post includes both scenarios provides supporting evidence for the claim that he saved two lives on the same day. The absence of additional sources and evidence doesn't automatically make the claim false.",
-          "2": "",
-          "3": "",
-          "4": ""
+          "2": "Muskogee Public Schools <a href='https://www.facebook.com/MuskogeeSchools/posts/10158469164212963'>recognized</a> his actions during a school board meeting and gave him the heroism award.<br><br>He also received honorary membership in the local police and sheriff’s departments.",
+          "3": "The authenticity of the claim is supported by media coverage, including CNN, The New York Times, and Enid News & Eagle, which confirmed the event.",
+          "4": "<label for='c04fq'>What made you suspicious that the story isn’t true?<br><br><input type='text' name='c04fq' if='c04fq' placeholder='Enter text here...' /><br><br><button>Send</button> </label>"
+        }
+      }
+    },
+    {
+      "id": "04",
+      "involves": "American professional basketball player LeBron James",
+      "background": "The movie “Barbie” premiered in 2023.",
+      "claim": "LeBron James dressed in pink for the “Barbie” movie",
+      "clues": {
+        "0": "ButtCrackSports <a href='https://twitter.com/ButtCrackSports/status/1682527619731046401'>tweeted</a> that LeBron James said '10/10 … a must-watch film' about the Barbie film.",
+        "1": "The photo had uneven wrinkling in James’ face, the poorly formed logo on his T-shirt, his oddly shaped fingernails.",
+        "2": "A Facebook <a href='https://www.facebook.com/NBAAlExtremoHD/posts/pfbid02rYcnYojZQ1YDweP5ZMumnCxpvrcuMpWXprpBFfRNqAfDyw6Kusy9sgG2GWHL9rQZl'>post</a> which claimed 'LeBron is ready to watch ‘Barbie' was flagged as Altered/Misleading."
+      },
+      "responses": {
+        "verdict": {
+          "boolean": false,
+          "v": "False",
+          "source": {
+            "link": "https://www.politifact.com/factchecks/2023/jul/27/social-media/no-lebron-james-did-not-wear-pink-for-the-barbie-m/",
+            "title": "Politifact"
+          }
+        },
+        "true": {
+          "0": "The claim came from a Twitter parody account with a profile that says, 'Nothing Tweeted Should Be Taken As Fact.'<br><br>Politifact says that the photo used in it is altered as well.",
+          "1": "AI experts pointed to these details to signal the pink skirt James photo was generated by AI.",
+          "2": "Meta works with independent fact-checkers who are certified through the non-partisan International Fact-Checking Network to help identify and review false information to combat false news and misinformation on its News Feed."
+        },
+        "false": {
+          "0": "The claim came from a Twitter parody account with a profile that says, 'Nothing Tweeted Should Be Taken As Fact.'<br><br>Politifact says that the photo used in it is altered as well.",
+          "1": "AI experts pointed to these details to signal the pink skirt James photo was generated by AI.",
+          "2": "Meta works with independent fact-checkers who are certified through the non-partisan International Fact-Checking Network to help identify and review false information to combat false news and misinformation on its News Feed."
+        }
+      }
+    },
+    {
+      "id": "05",
+      "involves": "US state Wisconsin",
+      "background": "Wisconsin is known as the dairy state, with farms dotting the countryside but the sand and peat marshes in central and northern Wisconsin create the perfect growing conditions for cranberries.",
+      "claim": "Wisconsin is the top cranberry producer in the United States",
+      "clues": {
+        "0": "Cranberries are Wisconsin’s official state fruit.",
+        "1": "Wisconsin’s cranberry produce is more than twice that of Massachusetts in 2021.",
+        "2": "Cranberries are Wisconsin’s important economic driver, employing nearly 4,000 people in Wisconsin and their marshes covering 21,000 acres of Wisconsin’s land. ",
+        "3": "<a href='https://fyi.extension.wisc.edu/impacts/articles/wisconsin-cranberries-supporting-a-billion-dollar-industry/'>University of Wisconsin-Madison</a> said that Wisconsin grew nearly 60% of the Cranberries."
+      },
+      "responses": {
+        "verdict": {
+          "boolean": true,
+          "v": "Good Enough To Be True",
+          "source": {
+            "link": "https://www.politifact.com/factchecks/2023/feb/02/tony-evers/yes-wisconsin-does-produce-60-of-the-countrys-supp/",
+            "title": "Politifact"
+          }
+        },
+        "true": {
+          "1": "BUT what does the clue say about Cranberry being the top producer?",
+          "2": "BUT what does the clue say about Cranberry being the top producer?",
+          "0": "BUT what does the clue say about Cranberry being the top producer?",
+          "3": "U.S. Department of Agriculture, National Agriculture Statistics Service, <a href='https://www.nass.usda.gov/Statistics_by_State/Wisconsin/Publications/Crops/2022/WI-Cranberries-Annual-05-22.pdf'>Wisconsin Ag News – Cranberries</a>, in May 2022, said that Wisconsin maintained its number one ranking in total cranberry production with 59 percent of the nation's total."
+        },
+        "false": {
+          "0": "This information doesn’t say anything about whether cranberries are the top producers or not! <br><br> How did you know that the claim was False?",
+          "1": "This information doesn’t say anything about whether cranberries are the top producers or not! <br><br> How did you know that the claim was False?",
+          "2": "This information doesn’t say anything about whether cranberries are the top producers or not! <br><br> How did you know that the claim was False?",
+          "3": ""
         }
       }
     }

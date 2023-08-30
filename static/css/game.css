@@ -41,7 +41,7 @@ SEC 1
   display: flex;
   justify-content: center;
   align-items: center;
-  
+
   animation-duration: 2s;
   animation-fill-mode: both;
   animation-name: fadeInOut1;
@@ -149,7 +149,8 @@ SEC 2
   background: #c36b00;
   margin-top: 5px;
 }
-#c_when, #c_when a {
+#c_when,
+#c_when a {
   color: orange;
   font-weight: 500;
   text-transform: uppercase;
@@ -549,4 +550,37 @@ SEC 4
     height: 0;
     backdrop-filter: none;
   }
+}
+#c04extra {
+  height: 400px;
+  max-width: 400px;
+  color: white;
+  padding: 30px;
+  margin: 20px;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  border-radius: 0.8rem;
+  border: 3px inset darkorange;
+  font-size: smaller;
+
+  animation-fill-mode: both;
+  animation-delay: 3s;
+}
+.c04extra {
+  animation-duration: 5s;
+  animation-fill-mode: both;
+  animation-name: fadeInOut_e4;
+  animation-delay: 3s;
+}
+@keyframes fadeInOut_e4 {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+#c04extra ul {
+  padding-left: 20px;
+  list-style-type: disc;
 }
