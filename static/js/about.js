@@ -38,7 +38,7 @@ function hideArticle() {
   aArticle.classList.remove("article_wrapper");
   exp_a.style.display = "block";
 }
-showArticle();
+// showArticle();
 
 let tldr = document.getElementById("tldr");
 let full = document.getElementById("full");
