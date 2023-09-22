@@ -26,7 +26,7 @@ let exp_a = document.querySelector(".exp_a");
 
 function showArticle() {
   moreInfo.style.display = "none";
-  aInfo1.style.width = "25vw";
+  // aInfo1.style.width = "25vw";
   aMain.classList.add("a_main_article");
   aArticle.classList.add("article_wrapper");
   exp_a.style.display = "none";

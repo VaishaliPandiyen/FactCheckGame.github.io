@@ -69,7 +69,7 @@
   align-items: center;
 }
 #a_game_1 {
-  width: 50vw;
+  max-width: 50vw;
 }
 #a_game_1 p,
 #a_game_1 h1 {
@@ -89,7 +89,7 @@
   /* margin: 5vh 5vw; */
 }
 .a_moreGameinfo > div {
-  width: 25vw;
+  /* width: 25vw; */
   text-align: center;
 }
 .article_controls {
