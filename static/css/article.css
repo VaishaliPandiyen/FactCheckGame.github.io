@@ -146,3 +146,6 @@
   color: darkslategray;
   backdrop-filter: blur(30px);
 }
+#article_full a {
+  color: black;
+}
